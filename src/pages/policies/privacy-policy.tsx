@@ -3,16 +3,16 @@
 import PolicyLayout from "@/app/components/Policies/PolicyLayout";
 
 export const metadata = {
-  title: "San Cards - Privacy Policy",
+  title: "San Utsav - Privacy Policy",
   description:
-    "Learn how San Cards collects, uses, and protects your personal information. Your privacy is our priority.",
+    "Learn how San Utsav collects, uses, and protects your personal information. Your privacy is our priority.",
 };
 
 export default function PrivacyPolicy() {
   return (
     <PolicyLayout title="Privacy Policy">
       <p className="mb-4">
-        At San Cards, your privacy is of utmost importance to us. This Privacy
+        At San Utsav, your privacy is of utmost importance to us. This Privacy
         Policy explains how we collect, use, and safeguard your personal
         information when you interact with our platform.
       </p>

@@ -1,8 +1,9 @@
 /** @format */
 
 "use client";
+
 /** @format */
-// import Image from "next/image";
+import Image from "next/image";
 
 import Link from "next/link";
 import React, { useState } from "react";
@@ -30,16 +31,13 @@ const Navbar: React.FC = () => {
           href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          {/* <Image
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8"
+          <Image
+            src={"/san-utsav-logo.png"}
+            className="h-18 w-52"
             alt="Logo"
             width={100}
             height={100}
-          /> */}{" "}
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            San Cards
-          </span>
+          />
         </Link>
 
         {/* Mobile Menu Button */}

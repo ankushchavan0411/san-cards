@@ -3,16 +3,16 @@
 import PolicyLayout from "@/app/components/Policies/PolicyLayout";
 
 export const metadata = {
-  title: "San Cards - Refund and Cancellation Policy",
+  title: "San Utsav - Refund and Cancellation Policy",
   description:
-    "Learn about our refund and cancellation policy at San Cards. Understand the eligibility criteria, refund process, and how to cancel your services easily.",
+    "Learn about our refund and cancellation policy at San Utsav. Understand the eligibility criteria, refund process, and how to cancel your services easily.",
 };
 
 export default function RefundPolicy() {
   return (
     <PolicyLayout title="Refund and Cancellation Policy">
       <p className="mb-4">
-        At San Cards, we aim to provide excellent service and ensure customer
+        At San Utsav, we aim to provide excellent service and ensure customer
         satisfaction. This policy outlines the conditions under which refunds
         and cancellations are processed.
       </p>

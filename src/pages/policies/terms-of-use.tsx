@@ -3,23 +3,23 @@
 import PolicyLayout from "@/app/components/Policies/PolicyLayout";
 
 export const metadata = {
-  title: "San Cards - Terms of Use",
+  title: "San Utsav - Terms of Use",
   description:
-    "Review the terms and conditions for using San Cards. Learn about user responsibilities, acceptable usage, and our policies to ensure a secure and fair experience.",
+    "Review the terms and conditions for using San Utsav. Learn about user responsibilities, acceptable usage, and our policies to ensure a secure and fair experience.",
 };
 
 export default function TermsOfUse() {
   return (
     <PolicyLayout title="Terms of Use">
       <p className="mb-4">
-        Welcome to San Cards! By accessing and using our services, you agree to
+        Welcome to San Utsav! By accessing and using our services, you agree to
         comply with the terms and conditions outlined in this document. Please
         read these terms carefully.
       </p>
 
       <h2 className="text-xl font-semibold mb-4">Acceptance of Terms</h2>
       <p className="mb-4">
-        By using San Cards, you acknowledge that you have read, understood, and
+        By using San Utsav, you acknowledge that you have read, understood, and
         agree to be bound by these Terms of Use. If you do not agree, please
         discontinue use of our services.
       </p>
@@ -63,15 +63,15 @@ export default function TermsOfUse() {
 
       <h2 className="text-xl font-semibold mb-4">Intellectual Property</h2>
       <p className="mb-4">
-        All content available on the San Cards platform, including designs,
-        text, graphics, and images, is the property of San Cards or its
+        All content available on the San Utsav platform, including designs,
+        text, graphics, and images, is the property of San Utsav or its
         licensors and is protected by copyright laws. Unauthorized use,
         reproduction, or distribution is strictly prohibited.
       </p>
 
       <h2 className="text-xl font-semibold mb-4">Limitation of Liability</h2>
       <p className="mb-4">
-        San Cards is not liable for any damages or losses resulting from the use
+        San Utsav is not liable for any damages or losses resulting from the use
         or inability to use our services. This includes, but is not limited to,
         direct, indirect, incidental, or consequential damages.
       </p>

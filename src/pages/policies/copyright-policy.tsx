@@ -3,9 +3,9 @@
 import PolicyLayout from "@/app/components/Policies/PolicyLayout";
 
 export const metadata = {
-  title: "San Cards - Copyright Policy",
+  title: "San Utsav - Copyright Policy",
   description:
-    "Understand the copyright policy of San Cards. Learn about intellectual property rights, user responsibilities, and how to report copyright infringements.",
+    "Understand the copyright policy of San Utsav. Learn about intellectual property rights, user responsibilities, and how to report copyright infringements.",
 };
 
 export default function CopyrightPolicy() {
@@ -13,7 +13,7 @@ export default function CopyrightPolicy() {
     <PolicyLayout title="Copyright Policy">
       <h2 className="text-xl font-semibold mb-4">Introduction</h2>
       <p className="mb-4">
-        At San Cards, we are committed to respecting the intellectual property
+        At San Utsav, we are committed to respecting the intellectual property
         rights of others and complying with all applicable copyright laws. This
         policy outlines our approach to copyright, content ownership, and the
         procedures for reporting copyright violations.
@@ -21,22 +21,22 @@ export default function CopyrightPolicy() {
 
       <h2 className="text-xl font-semibold mb-4">Content Ownership</h2>
       <p className="mb-4">
-        All content available on the San Cards platform, including but not
+        All content available on the San Utsav platform, including but not
         limited to designs, templates, text, images, graphics, and software, is
-        the exclusive property of San Cards or its licensors. This content is
+        the exclusive property of San Utsav or its licensors. This content is
         protected under applicable copyright laws and treaties.
       </p>
       <p className="mb-4">
         Users are prohibited from copying, reproducing, distributing, or
         modifying any content from the platform without prior written permission
-        from San Cards or the respective copyright owner.
+        from San Utsav or the respective copyright owner.
       </p>
 
       <h2 className="text-xl font-semibold mb-4">User-Generated Content</h2>
       <p className="mb-4">
         Users may upload or create content using our platform. By submitting
         content, users affirm that they own the rights to the material or have
-        obtained the necessary permissions to use it. San Cards is not liable
+        obtained the necessary permissions to use it. San Utsav is not liable
         for any user-generated content that infringes on the rights of others.
       </p>
 
@@ -88,7 +88,7 @@ export default function CopyrightPolicy() {
 
       <h2 className="text-xl font-semibold mb-4">Termination of Accounts</h2>
       <p className="mb-4">
-        San Cards reserves the right to terminate user accounts that are found
+        San Utsav reserves the right to terminate user accounts that are found
         to be repeatedly infringing on the copyrights of others.
       </p>
 
