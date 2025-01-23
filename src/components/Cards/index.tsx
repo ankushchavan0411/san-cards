@@ -58,7 +58,7 @@ const Cards: React.FC = () => {
               <strong>Price: Free</strong>
             </p>
             <Link
-              href="#"
+              href="/template/marathi/dohale-jevan-invitation-card/template-17"
               className="mt-3 inline-block text-blue-600 hover:text-blue-700 font-medium"
             >
               Customize This Card
