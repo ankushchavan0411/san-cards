@@ -1,6 +1,9 @@
+/** @format */
+
 import React from "react";
 import { LuLoader } from "react-icons/lu";
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface LoaderProps {}
 
 const Loader: React.FC<LoaderProps> = () => {

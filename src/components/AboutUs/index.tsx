@@ -61,7 +61,7 @@ const AboutUs: React.FC = () => {
           Join Us in Celebrating Your Special Moments
         </h3>
         <p className="text-lg text-gray-600 dark:text-gray-300">
-          Whether it's a wedding, birthday, festival, or any other occasion, San
+          Whether its a wedding, birthday, festival, or any other occasion, San
           Utsav is here to help you create the perfect invitation to share your
           happiness with your friends and family. Join us in celebrating Marathi
           culture and tradition with beautiful, meaningful, and personalized

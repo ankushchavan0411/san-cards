@@ -2,6 +2,7 @@
 
 import React from "react";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Error = ({ message }: any) => {
   return (
     <div className="flex h-[calc(100vh-80px)] w-full items-center justify-center bg-white p-5 dark:bg-gray-900">
