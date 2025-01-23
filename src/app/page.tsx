@@ -1,13 +1,12 @@
 /** @format */
 
-import Footer from "./components/Footer";
-
-// import PolicyNavigationLinks from "./components/Policies/PolicyNavigationLinks";
+import Footer from "@/app/components/Footer";
+import Navbar from "@/app/components/Header/Navbar";
 
 export default function Home() {
   return (
     <div className="container">
-      {/* <PolicyNavigationLinks /> */}
+      <Navbar />
       <Footer />
     </div>
   );
