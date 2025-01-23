@@ -16,9 +16,6 @@ const PolicyLayout: React.FC<PolicyLayoutProps> = ({ title, children }) => {
       <main className="p-6 max-w-3xl mx-auto bg-white rounded shadow mt-6">
         {children}
       </main>
-      <footer className="text-center py-4 bg-gray-200 text-sm mt-6">
-        &copy; {new Date().getFullYear()} Your Company. All rights reserved.
-      </footer>
     </div>
   );
 };
