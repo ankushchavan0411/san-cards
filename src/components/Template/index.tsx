@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import { Metadata } from "next";
+import BirthdayTemplate from "./BirthdayTemplate";
 
 export async function generateMetadata({
   params,
@@ -32,13 +33,14 @@ const Template = ({ cardData }: any) => {
       <h1 className="text-3xl font-bold mb-4">{cardData.title}</h1>
       <p className="text-lg mb-4">{cardData.description}</p>
       <div className="border p-4 rounded shadow border-orange-400">
-        <Image
+        {/* <Image
           src={cardData.image}
           alt={cardData.title}
           className="w-full h-auto"
           height={400}
           width={400}
-        />
+        /> */}
+        <BirthdayTemplate />
       </div>
     </div>
   );
