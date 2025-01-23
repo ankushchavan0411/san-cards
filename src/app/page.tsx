@@ -6,14 +6,14 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import CTA from "@/components/CTA";
 import Hero from "@/components/Header/Hero";
 import Testimonials from "@/components/Testimonials";
-import TrendingCategories from "@/components/TrendingCategories";
+import PopulerCategories from "@/components/PopulerCategories";
 import React from "react";
 
 export default function Home() {
   return (
     <React.Fragment>
       <Hero />
-      <TrendingCategories />
+      <PopulerCategories />
       <Cards />
       <Carousel />
       <Testimonials />

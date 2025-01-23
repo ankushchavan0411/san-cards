@@ -2,7 +2,7 @@
 
 import React from "react";
 
-const TrendingCategories: React.FC = () => {
+const PopulerCategories: React.FC = () => {
   const services = [
     {
       name: "शुभविवाह",
@@ -40,11 +40,15 @@ const TrendingCategories: React.FC = () => {
   ];
 
   return (
-    <section id="trending_categories" className="py-16">
+    <section id="populer_categories" className="py-16">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold">Trending Categories</h2>
-        <p className="text-lg text-gray-700">
-          We specialize in creating personalized cards for all occasions.
+        <h2 className="text-3xl font-bold">Populer Categories</h2>
+        <p className="text-lg text-gray-700 mt-3">
+          Create free customised invitation cards online. For weddings,
+          engagements, and birthdays, we have a unique collection of traditional
+          Marathi invitation cards. After selecting a card from our unique
+          selection and entering your information, your card is available to
+          download.
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -62,4 +66,4 @@ const TrendingCategories: React.FC = () => {
   );
 };
 
-export default TrendingCategories;
+export default PopulerCategories;
