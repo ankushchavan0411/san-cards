@@ -4,6 +4,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 // Define the structure of the mock data
 interface TemplateData {
+  id: string;
   title: string;
   description: string;
   image: string;
@@ -22,14 +23,43 @@ interface MockData {
 }
 
 // Mock data with explicit types
+
 const mockData: MockData = {
   marathi: {
-    "dohale-jevan-invitation-card": {
-      "template-17": {
-        title: "Dohale Jevan Invitation Card",
+    "wedding-invitation-card": {
+      "template-wedding": {
+        id: "template-wedding",
+        title: "Wedding Invitation Card",
         description:
-          "Celebrate the upcoming arrival with our traditional Dohale Jevan card.",
-        image: "/images/dohale-jevan-template-17.jpg",
+          "Celebrate the joyous union with our elegant Wedding invitation card.",
+        image: "/images/dohale-jevan-template-wedding.jpg",
+      },
+    },
+    "birthday-banner": {
+      "template-birthday": {
+        id: "template-birthday",
+        title: "Birthday Invitation Card",
+        description:
+          "Make birthdays special with our colorful and vibrant Birthday invitation card.",
+        image: "/images/dohale-jevan-template-birthday.jpg",
+      },
+    },
+    "housewarming-card": {
+      "template-housewarming": {
+        id: "template-housewarming",
+        title: "Housewarming Invitation Card",
+        description:
+          "Invite your loved ones to your new home with our warm Housewarming invitation card.",
+        image: "/images/dohale-jevan-template-housewarming.jpg",
+      },
+    },
+    "naming-ceremony-card": {
+      "template-naming-ceremony": {
+        id: "template-naming-ceremony",
+        title: "Naming Ceremony Invitation Card",
+        description:
+          "Celebrate the naming ceremony with our beautiful Naming Ceremony invitation card.",
+        image: "/images/dohale-jevan-template-naming-ceremony.jpg",
       },
     },
   },
