@@ -1,6 +1,6 @@
 /** @format */
 
-import PolicyLayout from "@/app/components/Policies/PolicyLayout";
+import PolicyLayout from "@/components/Policies/PolicyLayout";
 
 export const metadata = {
   title: "San Utsav - Privacy Policy",
@@ -8,7 +8,7 @@ export const metadata = {
     "Learn how San Utsav collects, uses, and protects your personal information. Your privacy is our priority.",
 };
 
-export default function PrivacyPolicy() {
+export default function PrivacyPolicyPage() {
   return (
     <PolicyLayout title="Privacy Policy">
       <p className="mb-4">

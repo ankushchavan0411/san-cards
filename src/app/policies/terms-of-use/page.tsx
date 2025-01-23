@@ -1,6 +1,6 @@
 /** @format */
 
-import PolicyLayout from "@/app/components/Policies/PolicyLayout";
+import PolicyLayout from "@/components/Policies/PolicyLayout";
 
 export const metadata = {
   title: "San Utsav - Terms of Use",

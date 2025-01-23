@@ -1,7 +1,7 @@
 /** @format */
 
-import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Header/Navbar";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Header/Navbar";
 import type { Metadata } from "next";
 
 import "@/app/globals.css";

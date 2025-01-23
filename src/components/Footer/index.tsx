@@ -1,6 +1,6 @@
 /** @format */
 
-import PolicyNavigationLinks from "@/app/components/Policies/PolicyNavigationLinks";
+import PolicyNavigationLinks from "@/components/Policies/PolicyNavigationLinks";
 import Image from "next/image";
 import Link from "next/link";
 

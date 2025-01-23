@@ -1,6 +1,6 @@
 /** @format */
 
-import SectionTitle from "@/app/components/Common/SectionTitle";
+import SectionTitle from "@/components/Common/SectionTitle";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 
 const contactMethods = [

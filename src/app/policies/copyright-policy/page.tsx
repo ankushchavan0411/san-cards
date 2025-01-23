@@ -1,6 +1,6 @@
 /** @format */
 
-import PolicyLayout from "@/app/components/Policies/PolicyLayout";
+import PolicyLayout from "@/components/Policies/PolicyLayout";
 
 export const metadata = {
   title: "San Utsav - Copyright Policy",
@@ -8,7 +8,7 @@ export const metadata = {
     "Understand the copyright policy of San Utsav. Learn about intellectual property rights, user responsibilities, and how to report copyright infringements.",
 };
 
-export default function CopyrightPolicy() {
+export default function CopyrightPolicyPage() {
   return (
     <PolicyLayout title="Copyright Policy">
       <h2 className="text-xl font-semibold mb-4">Introduction</h2>
