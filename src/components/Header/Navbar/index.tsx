@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="mb-6 border-b">
+    <nav className="mb-6 border-b border-orange-400">
       <div className="flex flex-wrap items-center justify-between mx-auto py-2">
         {/* Logo Section */}
         <Link

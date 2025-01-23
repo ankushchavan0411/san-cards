@@ -15,7 +15,7 @@ const PolicyNavigationLinks: React.FC = () => {
   ];
 
   return (
-    <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 gap-4">
+    <ul className="flex flex-wrap items-center mb-6 text-sm font-medium sm:mb-0 gap-4">
       {links.map((link, index) => (
         <Link key={index} href={link.href} className="hover:underline">
           {link.label}

@@ -28,10 +28,10 @@ export async function generateMetadata({
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Template = ({ cardData }: any) => {
   return (
-    <div className="container mx-auto p-8">
+    <div className="py-8">
       <h1 className="text-3xl font-bold mb-4">{cardData.title}</h1>
       <p className="text-lg mb-4">{cardData.description}</p>
-      <div className="border p-4 rounded shadow">
+      <div className="border p-4 rounded shadow border-orange-400">
         <Image
           src={cardData.image}
           alt={cardData.title}
