@@ -14,11 +14,7 @@ export const metadata: Metadata = {
 };
 
 const ContactPage = () => {
-  return (
-    <div className="container px-32">
-      <Contact />
-    </div>
-  );
+  return <Contact />;
 };
 
 export default ContactPage;

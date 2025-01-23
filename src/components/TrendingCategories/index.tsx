@@ -47,7 +47,7 @@ const TrendingCategories: React.FC = () => {
           We specialize in creating personalized cards for all occasions.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
         {services.map((service, index) => (
           <div
             key={index}

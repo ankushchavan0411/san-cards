@@ -1,13 +1,13 @@
 /** @format */
-
+"use client";
 import PolicyNavigationLinks from "@/components/Policies/PolicyNavigationLinks";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-white rounded-lg shadow dark:bg-gray-900">
-      <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+    <footer className="mt-8 border-t">
+      <div className="w-full mx-auto py-4">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link
             href="/"
@@ -23,10 +23,10 @@ const Footer = () => {
           </Link>
           <PolicyNavigationLinks />
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <hr className="my-4 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-4" />
         <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          {/* &copy; {new Date().getFullYear()} San Utsav All Rights Reserved. */}
-          &copy; 2025 San Utsav All Rights Reserved.
+          &copy; {new Date().getFullYear()} San Utsav - All Rights Reserved.
+          {/* &copy; 2025 San Utsav - All Rights Reserved. */}
         </span>
       </div>
     </footer>

@@ -23,8 +23,8 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-white border-b border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className="mb-6 border-b">
+      <div className="flex flex-wrap items-center justify-between mx-auto py-2">
         {/* Logo Section */}
         <Link
           href="/"

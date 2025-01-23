@@ -13,11 +13,7 @@ export const metadata: Metadata = {
 };
 
 const ServicesPage = () => {
-  return (
-    <div className="container px-32">
-      <Services />
-    </div>
-  );
+  return <Services />;
 };
 
 export default ServicesPage;
