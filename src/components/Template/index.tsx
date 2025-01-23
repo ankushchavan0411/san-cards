@@ -1,9 +1,10 @@
 /** @format */
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import { Metadata } from "next";
 import BirthdayTemplate from "./BirthdayTemplate";
+import WeddingInvite from "./WeddingInvite";
 
 export async function generateMetadata({
   params,
@@ -41,6 +42,7 @@ const Template = ({ cardData }: any) => {
           width={400}
         /> */}
         <BirthdayTemplate />
+        {/* <WeddingInvite /> */}
       </div>
     </div>
   );

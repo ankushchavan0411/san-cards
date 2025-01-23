@@ -1,4 +1,5 @@
 /** @format */
+import Image from "next/image";
 
 // components/BirthdayTemplate.tsx
 import React, { useEffect, useRef, useState } from "react";
@@ -62,7 +63,7 @@ const BirthdayTemplate: React.FC = () => {
         drawBirthdayCard(ctx);
       }
     }
-  }, [name, message]); // Re-run drawing when name or message changes
+  }, [name, message]);
 
   // Handle user input changes
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) =>
@@ -121,7 +122,14 @@ const BirthdayTemplate: React.FC = () => {
       {/* Canvas and Preview Section */}
       <div className="flex-1 p-4 space-y-4">
         <h2 className="text-xl font-semibold">Preview</h2>
-        <canvas ref={canvasRef} className="w-full border rounded-lg" />
+        <Image
+          src={imageUrl}
+          alt="Wedding Invite Preview"
+          className="w-full rounded-lg"
+          width={400}
+          height={400}
+        />
+        {/* <canvas ref={canvasRef} className="w-full border rounded-lg" /> */}
       </div>
     </div>
   );
