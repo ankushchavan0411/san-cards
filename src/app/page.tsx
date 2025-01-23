@@ -7,10 +7,11 @@ import CTA from "@/components/CTA";
 import Hero from "@/components/Header/Hero";
 import Testimonials from "@/components/Testimonials";
 import TrendingCategories from "@/components/TrendingCategories";
+import React from "react";
 
 export default function Home() {
   return (
-    <div className="container">
+    <React.Fragment>
       <Hero />
       <TrendingCategories />
       <Cards />
@@ -18,6 +19,6 @@ export default function Home() {
       <Testimonials />
       <CTA />
       <ScrollUp />
-    </div>
+    </React.Fragment>
   );
 }

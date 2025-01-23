@@ -25,21 +25,21 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold">What Our Clients Say</h2>
+        <h2 className="text-3xl font-bold">What Other Users Say</h2>
         <p className="text-lg text-gray-700">
-          Here are a few words from our happy customers.
+          Here are a few words from happy users.
         </p>
       </div>
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="bg-gray-50 p-6 rounded-lg shadow-md w-full sm:w-1/3"
+            className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center"
           >
             <p className="text-lg italic text-gray-600 mb-4">
-              "{testimonial.feedback}"
+              {`"${testimonial.feedback}"`}
             </p>
             <h4 className="font-semibold text-xl">{testimonial.name}</h4>
             <p className="text-sm text-gray-500">{testimonial.location}</p>
