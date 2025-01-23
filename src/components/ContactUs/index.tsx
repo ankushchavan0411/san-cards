@@ -26,8 +26,8 @@ const contactMethods = [
 
 const ContactUs = () => {
   return (
-    <section className="py-32">
-      <div className="gap-12 lg:flex">
+    <section className="lg:py-28 md:py-14 sm:py-8">
+      <div className="gap-8 lg:flex">
         <SectionTitle
           title="Let’s connect"
           paragraph="Feel free to reach out for academic guidance, collaboration
