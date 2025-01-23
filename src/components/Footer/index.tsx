@@ -17,8 +17,8 @@ const Footer = () => {
               src={"/san-utsav-logo.png"}
               className="h-18 w-52"
               alt="Logo"
-              width={100}
-              height={100}
+              width={400}
+              height={400}
             />
           </Link>
           <PolicyNavigationLinks />
