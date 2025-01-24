@@ -85,7 +85,7 @@ const Template = ({ cardData }: any) => {
             />
             <button
               // onClick={downloadImage}
-              className="w-full bg-primary text-white p-2 rounded-lg mt-4 hover:bg-primary-300"
+              className="w-full bg-primary text-white p-2 rounded-lg mt-4 hover:bg-primary-600"
             >
               Preview
             </button>
