@@ -7,6 +7,7 @@ import Loader from "@/components/Common/Loader";
 import Template from "@/components/Template";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import Breadcrumb from "@/components/Common/Breadcrumb";
 
 const TemplatePage = () => {
   const params = useParams();
@@ -51,7 +52,23 @@ const TemplatePage = () => {
     return <Error message="Card data not found." />;
   }
 
-  return <Template cardData={cardData} />;
+  const breadcrumbs = [
+    { label: "Home", href: "/" },
+    {
+      label: language
+        ? language.charAt(0).toUpperCase() + language.slice(1)
+        : "Language",
+    },
+    { label: category ? category.replace(/-/g, " ") : "Category" },
+    { label: templateId ? templateId.replace(/-/g, " ") : "Template Id" },
+  ];
+
+  return (
+    <div className="py-8 bg-gray-50 px-4">
+      <Breadcrumb items={breadcrumbs} />
+      <Template cardData={cardData} />
+    </div>
+  );
 };
 
 export default TemplatePage;

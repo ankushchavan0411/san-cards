@@ -22,21 +22,164 @@ type TemplatesData = {
 // Mock data for templates
 const mockTemplates: TemplatesData = {
   marathi: {
-    "naming-ceremony": [
+    wedding: [
       {
         id: "template-1",
-        title: "Template 1",
-        image: "/images/template-1.jpg",
+        title: "Elegant Wedding Template",
+        image:
+          "https://dummyimage.com/1200x1200/ffcccb/000000&text=Wedding+Template+1",
       },
       {
         id: "template-2",
-        title: "Template 2",
-        image: "/images/template-2.jpg",
+        title: "Traditional Wedding Card",
+        image:
+          "https://dummyimage.com/1200x1200/ffcccb/000000&text=Wedding+Template+2",
       },
       {
         id: "template-3",
-        title: "Template 3",
-        image: "/images/template-3.jpg",
+        title: "Floral Wedding Design",
+        image:
+          "https://dummyimage.com/1200x1200/ffcccb/000000&text=Wedding+Template+3",
+      },
+    ],
+    engagement: [
+      {
+        id: "template-1",
+        title: "Elegant Engagement Card",
+        image:
+          "https://dummyimage.com/1200x1200/dedede/000000&text=Engagement+Template+1",
+      },
+      {
+        id: "template-2",
+        title: "Golden Ring Theme",
+        image:
+          "https://dummyimage.com/1200x1200/dedede/000000&text=Engagement+Template+2",
+      },
+      {
+        id: "template-3",
+        title: "Traditional Engagement Design",
+        image:
+          "https://dummyimage.com/1200x1200/dedede/000000&text=Engagement+Template+3",
+      },
+    ],
+    "happy-birthday": [
+      {
+        id: "template-1",
+        title: "Colorful Birthday Template",
+        image:
+          "https://dummyimage.com/1200x1200/fdfd96/000000&text=Birthday+Template+1",
+      },
+      {
+        id: "template-2",
+        title: "Modern Birthday Card",
+        image:
+          "https://dummyimage.com/1200x1200/fdfd96/000000&text=Birthday+Template+2",
+      },
+      {
+        id: "template-3",
+        title: "Birthday Party Theme",
+        image:
+          "https://dummyimage.com/1200x1200/fdfd96/000000&text=Birthday+Template+3",
+      },
+    ],
+    housewarming: [
+      {
+        id: "template-1",
+        title: "Elegant Housewarming Template",
+        image:
+          "https://dummyimage.com/1200x1200/9acd32/ffffff&text=Housewarming+Template+1",
+      },
+      {
+        id: "template-2",
+        title: "Floral Housewarming Design",
+        image:
+          "https://dummyimage.com/1200x1200/9acd32/ffffff&text=Housewarming+Template+2",
+      },
+      {
+        id: "template-3",
+        title: "Minimalist Housewarming Card",
+        image:
+          "https://dummyimage.com/1200x1200/9acd32/ffffff&text=Housewarming+Template+3",
+      },
+    ],
+    newborn: [
+      {
+        id: "template-1",
+        title: "Adorable Newborn Template",
+        image:
+          "https://dummyimage.com/1200x1200/ffb6c1/000000&text=Newborn+Template+1",
+      },
+      {
+        id: "template-2",
+        title: "Baby Shower Design",
+        image:
+          "https://dummyimage.com/1200x1200/ffb6c1/000000&text=Newborn+Template+2",
+      },
+      {
+        id: "template-3",
+        title: "Pastel Baby Theme",
+        image:
+          "https://dummyimage.com/1200x1200/ffb6c1/000000&text=Newborn+Template+3",
+      },
+    ],
+    "naming-ceremony": [
+      {
+        id: "template-1",
+        title: "Charming Naming Ceremony Template",
+        image:
+          "https://dummyimage.com/1200x1200/add8e6/000000&text=Naming+Ceremony+Template+1",
+      },
+      {
+        id: "template-2",
+        title: "Adorable Baby Name Card",
+        image:
+          "https://dummyimage.com/1200x1200/add8e6/000000&text=Naming+Ceremony+Template+2",
+      },
+      {
+        id: "template-3",
+        title: "Traditional Naming Invitation",
+        image:
+          "https://dummyimage.com/1200x1200/add8e6/000000&text=Naming+Ceremony+Template+3",
+      },
+    ],
+    "thank-you": [
+      {
+        id: "template-1",
+        title: "Elegant Thank You Card",
+        image:
+          "https://dummyimage.com/1200x1200/f4a460/ffffff&text=Thank+You+Template+1",
+      },
+      {
+        id: "template-2",
+        title: "Floral Gratitude Design",
+        image:
+          "https://dummyimage.com/1200x1200/f4a460/ffffff&text=Thank+You+Template+2",
+      },
+      {
+        id: "template-3",
+        title: "Minimalist Thank You Template",
+        image:
+          "https://dummyimage.com/1200x1200/f4a460/ffffff&text=Thank+You+Template+3",
+      },
+    ],
+    condolence: [
+      {
+        id: "template-1",
+        title: "Respectful Condolence Card",
+        image:
+          "https://dummyimage.com/1200x1200/808080/ffffff&text=Condolence+Template+1",
+      },
+      {
+        id: "template-2",
+        title: "Elegant Memorial Card",
+        image:
+          "https://dummyimage.com/1200x1200/808080/ffffff&text=Condolence+Template+2",
+      },
+      {
+        id: "template-3",
+        title: "Traditional Tribute Design",
+        image:
+          "https://dummyimage.com/1200x1200/808080/ffffff&text=Condolence+Template+3",
       },
     ],
   },
@@ -70,7 +213,7 @@ const TemplateListPage = () => {
   ];
 
   return (
-    <div className="py-8">
+    <div className="py-8 bg-gray-50 px-4">
       <Breadcrumb items={breadcrumbs} />
       <TemplateList
         templates={templates}
