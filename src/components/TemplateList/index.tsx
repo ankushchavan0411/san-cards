@@ -37,11 +37,11 @@ const TemplateList: React.FC<TemplateListProps> = ({
                 height={1200}
               />
               <div className="px-5 py-5">
-                <h5 className="text-xl font-semibold tracking-tight">
+                <h5 className="text-xl font-semibold tracking-tight mb-4">
                   {template.title}
                 </h5>
                 <Ratings rating={5} />
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mt-4">
                   <span className="text-2xl font-bold flex gap-2">
                     <span
                       className={`${template.isFree ? "line-through" : ""}`}
