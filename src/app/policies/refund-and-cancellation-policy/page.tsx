@@ -1,6 +1,7 @@
 /** @format */
 
 import PolicyLayout from "@/components/Policies/PolicyLayout";
+import Link from "next/link";
 
 export const metadata = {
   title: "San Utsav - Refund and Cancellation Policy",
@@ -57,12 +58,12 @@ export default function RefundPolicy() {
       <h2 className="text-xl font-semibold mb-4">How to Request a Refund</h2>
       <p className="mb-4">
         To request a refund, please contact our support team at{" "}
-        <a
+        <Link
           href="mailto:support@sancards.com"
           className="text-blue-600 hover:underline"
         >
           support@sancards.com
-        </a>{" "}
+        </Link>{" "}
         with the following details:
       </p>
       <ul className="list-disc ml-8 mb-4">
@@ -96,12 +97,12 @@ export default function RefundPolicy() {
       <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
       <p>
         If you have any questions about this policy, please contact us at{" "}
-        <a
+        <Link
           href="mailto:support@sancards.com"
           className="text-blue-600 hover:underline"
         >
           support@sancards.com
-        </a>
+        </Link>
         .
       </p>
     </PolicyLayout>
