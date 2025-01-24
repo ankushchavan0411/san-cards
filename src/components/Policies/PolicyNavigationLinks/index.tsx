@@ -1,8 +1,11 @@
 /** @format */
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const PolicyNavigationLinks: React.FC = () => {
+  const pathname = usePathname();
+
   const links = [
     { href: "/policies/privacy-policy", label: "Privacy Policy" },
     {
@@ -20,7 +23,7 @@ const PolicyNavigationLinks: React.FC = () => {
         <Link
           key={index}
           href={link.href}
-          className="hover:underline hover:text-primary hover:font-bold"
+          className={`hover:underline hover:text-primary hover:font-bold ${pathname === link.href ? "text-primary font-bold" : ""}`}
         >
           {link.label}
         </Link>

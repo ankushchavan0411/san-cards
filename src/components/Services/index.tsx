@@ -55,7 +55,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <div className="py-12 px-6 bg-gray-50 dark:bg-gray-800">
+    <div className="py-12 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white mb-6">
           Our Services
@@ -70,15 +70,11 @@ const Services: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg dark:bg-gray-900"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-primary transition-shadow duration-300 border border-primary hover:shadow-lg cursor-pointer"
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
-                {service.name}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                {service.description}
-              </p>
+              <div className="text-6xl mb-4">{service.icon}</div>
+              <h3 className="text-2xl font-semibold mb-2">{service.name}</h3>
+              <p className="text-gray-600">{service.description}</p>
             </div>
           ))}
         </div>
