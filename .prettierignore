@@ -1,0 +1,16 @@
+.next
+.lintstagedrc.ts
+.prettierrc
+eslint.config.mjs
+next.config.ts
+package-lock.json
+package.json
+postcss.config.mjs
+tsconfig.json
+README.md
+tailwind.config.ts 
+node_modules/
+build/
+dist/
+.eslintcache
+.vscode/
