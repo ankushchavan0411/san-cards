@@ -8,6 +8,8 @@ interface TemplateData {
   title: string;
   description: string;
   image: string;
+  isFree?: boolean;
+  price?: number;
 }
 
 interface CategoryData {
@@ -33,6 +35,8 @@ const mockData: MockData = {
         description:
           "Celebrate the joyous union with our elegant Wedding invitation card.",
         image: "/images/dohale-jevan-template-wedding.jpg",
+        isFree: true,
+        price: 99,
       },
     },
     "birthday-banner": {
@@ -42,6 +46,8 @@ const mockData: MockData = {
         description:
           "Make birthdays special with our colorful and vibrant Birthday invitation card.",
         image: "/images/dohale-jevan-template-birthday.jpg",
+        isFree: true,
+        price: 99,
       },
     },
     "housewarming-card": {
@@ -51,6 +57,8 @@ const mockData: MockData = {
         description:
           "Invite your loved ones to your new home with our warm Housewarming invitation card.",
         image: "/images/dohale-jevan-template-housewarming.jpg",
+        isFree: true,
+        price: 99,
       },
     },
     "naming-ceremony-card": {
@@ -60,6 +68,8 @@ const mockData: MockData = {
         description:
           "Celebrate the naming ceremony with our beautiful Naming Ceremony invitation card.",
         image: "/images/dohale-jevan-template-naming-ceremony.jpg",
+        isFree: true,
+        price: 99,
       },
     },
   },
