@@ -37,7 +37,7 @@ const Cards: React.FC = () => {
   ];
 
   return (
-    <section className="py-16">
+    <section className="pb-16">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold">Card Designs</h2>
         <p className="text-lg text-gray-700">

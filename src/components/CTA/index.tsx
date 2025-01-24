@@ -15,7 +15,7 @@ const CTA: React.FC = () => {
       </p>
       <Link
         href="/services"
-        className="px-8 py-3 bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-700 rounded-full font-medium"
+        className="inline-block bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold py-3 px-8 rounded-lg shadow-lg text-xl transition duration-300"
       >
         Explore Our Services
       </Link>

@@ -36,7 +36,7 @@ const Testimonials: React.FC = () => {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center"
+            className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-primary hover:shadow-primary"
           >
             <p className="text-lg italic text-gray-600 mb-4">
               {`"${testimonial.feedback}"`}
