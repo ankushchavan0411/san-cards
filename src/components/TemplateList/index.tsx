@@ -9,6 +9,8 @@ type Template = {
   id: string;
   title: string;
   image: string;
+  price: number;
+  isFree: boolean;
 };
 
 type TemplateListProps = {
@@ -55,11 +57,17 @@ const TemplateList: React.FC<TemplateListProps> = ({
                 <Ratings rating={5} />
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold flex gap-2">
-                    <span className="line-through"> ₹199</span>
-                    <small className="text-green-500">Free</small>
+                    <span
+                      className={`${template.isFree ? "line-through" : ""}`}
+                    >{`₹${template.price}`}</span>
+                    {template.isFree && (
+                      <small className="text-green-500">Free</small>
+                    )}
                   </span>
                   <button className="text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                    Customize
+                    {`Customize ${
+                      !template.isFree ? "With Watermark" : "Free"
+                    }`}
                   </button>
                 </div>
               </div>
