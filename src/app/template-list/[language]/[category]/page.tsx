@@ -238,6 +238,7 @@ const mockTemplates: TemplatesData = {
 const TemplateListPage = () => {
   const params = useParams();
   let { language, category } = params || {};
+  console.log("params", params);
 
   // Ensure `language` and `category` are strings
   language = Array.isArray(language) ? language[0] : language;
@@ -252,14 +253,25 @@ const TemplateListPage = () => {
     }
   }, [language, category]);
 
+  // Dynamically create breadcrumb links based on URL segments
   const breadcrumbs = [
     { label: "Home", href: "/" },
-    {
-      label: language
-        ? language.charAt(0).toUpperCase() + language.slice(1)
-        : "Language",
-    },
-    { label: category ? category.replace(/-/g, " ") : "Category" },
+    ...(language
+      ? [
+          {
+            label: language.charAt(0).toUpperCase() + language.slice(1),
+            href: `/template-lists/${language}`,
+          },
+        ]
+      : []),
+    ...(category
+      ? [
+          {
+            label: category.replace(/-/g, " ").toUpperCase(),
+            href: `/template-lists/${language}/${category}`,
+          },
+        ]
+      : []),
   ];
 
   return (
