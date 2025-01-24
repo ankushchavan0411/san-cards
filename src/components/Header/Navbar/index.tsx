@@ -4,12 +4,13 @@
 
 /** @format */
 import Image from "next/image";
-
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import React, { useState } from "react";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const links = [
     { href: "/", label: "Home" },
@@ -24,7 +25,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="mb-6 border-b border-primary">
-      <div className="flex flex-wrap items-center justify-between mx-auto py-2">
+      <div className="flex flex-wrap items-center justify-between mx-auto py-4">
         {/* Logo Section */}
         <Link
           href="/"
@@ -69,17 +70,14 @@ const Navbar: React.FC = () => {
           className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
           id="navbar-default"
         >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-primary rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
             {links.map((link, index) => (
               <li key={index}>
                 <Link
                   href={link.href}
-                  className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${
-                    link.href === "/"
-                      ? "text-blue-700 md:dark:text-blue-500"
-                      : ""
-                  }`}
-                  aria-current={link.href === "/" ? "page" : undefined}
+                  className={`block py-2 px-3 rounded hover:bg-primary hover:text-white md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 font-bold ${
+                    !isOpen && pathname === link.href ? "text-primary" : ""
+                  } ${isOpen && pathname === link.href ? "bg-primary text-white" : ""}`}
                 >
                   {link.label}
                 </Link>
