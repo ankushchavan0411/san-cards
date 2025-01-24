@@ -2,18 +2,10 @@
 
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import TemplateList from "@/components/TemplateList";
+import { Template } from "@/types";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import mockTemplates from "./mockTemplates";
-
-// Template type
-type Template = {
-  id: string;
-  title: string;
-  image: string;
-  price: number;
-  isFree: boolean;
-};
 
 const TemplateListPage = () => {
   const params = useParams();

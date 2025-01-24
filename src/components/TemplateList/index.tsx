@@ -1,23 +1,9 @@
 /** @format */
 
+import { TemplateListProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import Ratings from "../Common/Ratings";
-
-// Define the structure of template data
-type Template = {
-  id: string;
-  title: string;
-  image: string;
-  price: number;
-  isFree: boolean;
-};
-
-type TemplateListProps = {
-  templates: Template[];
-  language: string;
-  category: string;
-};
 
 const TemplateList: React.FC<TemplateListProps> = ({
   templates,

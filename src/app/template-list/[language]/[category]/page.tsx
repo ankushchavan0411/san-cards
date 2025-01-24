@@ -4,22 +4,9 @@
 
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import TemplateList from "@/components/TemplateList";
+import { TemplatesData } from "@/types";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-
-type Template = {
-  id: string;
-  title: string;
-  image: string;
-  price: number;
-  isFree: boolean;
-};
-
-type TemplatesData = {
-  [language: string]: {
-    [category: string]: Template[];
-  };
-};
 
 // Mock data for templates
 const mockTemplates: TemplatesData = {
