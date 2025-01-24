@@ -49,7 +49,7 @@ const Cards: React.FC = () => {
         {demoCards.map((card, index) => (
           <div
             key={index}
-            className="p-6 rounded-lg shadow-md hover:shadow-lg hover:shadow-orange-400 transition-shadow duration-300 text-center border border-orange-400"
+            className="p-6 rounded-lg shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300 text-center border border-primary"
           >
             <Link href={card.url}>
               <Image

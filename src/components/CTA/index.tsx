@@ -5,7 +5,7 @@ import React from "react";
 
 const CTA: React.FC = () => {
   return (
-    <section className="py-16 bg-orange-400 text-white text-center">
+    <section className="py-16 bg-primary text-white text-center">
       <h2 className="text-3xl font-bold mb-4">
         Ready to Create Your Invitation, Banner?
       </h2>

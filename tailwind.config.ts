@@ -34,9 +34,14 @@ export default {
     },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        primary:"#ba1313"
+        "background": "var(--background)",
+        "foreground": "var(--foreground)",
+        "primary": "#ba1313",
+        "primary-300": "#ba1515",
+        "primary-500": "#ba1717",
+        "primary-600":"#ba2020"
+        
+        
       },
     },
   },
