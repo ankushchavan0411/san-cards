@@ -6,11 +6,20 @@ import Image from "next/image";
 const Carousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // const images = [
+  //   "https://dummyimage.com/800x400/ff7f7f/333333?text=Wedding+Card",
+  //   "https://dummyimage.com/800x400/7f7fff/333333?text=Birthday+Card",
+  //   "https://dummyimage.com/800x400/7fff7f/333333?text=Festival+Card",
+  //   "https://dummyimage.com/800x400/ffff7f/333333?text=Invitation+Card",
+  // ];
+
   const images = [
-    "https://dummyimage.com/800x400/ff7f7f/333333?text=Wedding+Card",
-    "https://dummyimage.com/800x400/7f7fff/333333?text=Birthday+Card",
-    "https://dummyimage.com/800x400/7fff7f/333333?text=Festival+Card",
-    "https://dummyimage.com/800x400/ffff7f/333333?text=Invitation+Card",
+    // "/carousel/hero-page.svg",
+    "/carousel/slide-one.svg",
+    "/carousel/slide-two.svg",
+    "/carousel/slide-three.svg",
+    "/carousel/slide-four.svg",
+    "/carousel/slide-five.svg",
   ];
 
   const nextSlide = () => {
