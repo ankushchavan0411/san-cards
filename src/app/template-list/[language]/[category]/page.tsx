@@ -4,7 +4,7 @@
 
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import TemplateList from "@/components/TemplateList";
-import { TemplatesData } from "@/types";
+import { Template, TemplatesData } from "@/types";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -225,7 +225,6 @@ const mockTemplates: TemplatesData = {
 const TemplateListPage = () => {
   const params = useParams();
   let { language, category } = params || {};
-  console.log("params", params);
 
   // Ensure `language` and `category` are strings
   language = Array.isArray(language) ? language[0] : language;
