@@ -1,6 +1,7 @@
 /** @format */
 
 import PolicyLayout from "@/components/Policies/PolicyLayout";
+import Link from "next/link";
 
 export const metadata = {
   title: "San Utsav - Privacy Policy",
@@ -98,12 +99,12 @@ export default function PrivacyPolicyPage() {
       <p>
         If you have questions or concerns about this Privacy Policy or your
         data, please contact us at{" "}
-        <a
+        <Link
           href="mailto:support@sancards.com"
           className="text-blue-600 hover:underline"
         >
           support@sancards.com
-        </a>
+        </Link>
         .
       </p>
     </PolicyLayout>

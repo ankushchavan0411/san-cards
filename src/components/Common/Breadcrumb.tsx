@@ -1,30 +1,33 @@
-/** @format */
-
 import Link from "next/link";
 
-type BreadcrumbProps = {
-  items: { label: string; href?: string }[];
+type BreadcrumbItem = {
+  label: string;
+  href: string;
 };
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
+type BreadcrumbProps = {
+  items: BreadcrumbItem[];
+};
+
+const Breadcrumb = ({ items }: BreadcrumbProps) => {
   return (
-    <nav className="text-sm mb-6" aria-label="breadcrumb">
-      <ol className="list-none p-0 inline-flex">
+    <nav className="mb-4">
+      <ul className="flex space-x-2 text-sm text-gray-600">
         {items.map((item, index) => (
-          <li key={index} className="flex items-center capitalize">
-            {item.href ? (
-              <Link href={item.href} className="text-blue-500 hover:underline">
+          <li key={index} className="flex items-center">
+            {/* Render link for all but the last item */}
+            {index < items.length - 1 ? (
+              <Link href={item.href} className="hover:underline">
                 {item.label}
               </Link>
             ) : (
-              <span className="text-gray-500">{item.label}</span>
+              <span>{item.label}</span> // Last item is not clickable
             )}
-            {index < items.length - 1 && (
-              <span className="mx-2 text-gray-400">/</span>
-            )}
+            {/* Separator */}
+            {index < items.length - 1 && <span className="mx-2">/</span>}
           </li>
         ))}
-      </ol>
+      </ul>
     </nav>
   );
 };

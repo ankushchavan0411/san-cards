@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative bg-orange-400 text-white py-20 md:py-28">
+    <section className="relative bg-primary text-white py-20 md:py-28">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40"
         // style={{ backgroundImage: 'url("/path/to/your-image.jpg")' }}

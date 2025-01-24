@@ -178,7 +178,7 @@ const SakharpudaInvitation: React.FC = () => {
             )}
             <button
               onClick={downloadImage}
-              className="w-full bg-orange-400 text-white p-2 rounded-lg mt-4 hover:bg-orange-500"
+              className="w-full bg-primary text-white p-2 rounded-lg mt-4 hover:bg-primary-500"
             >
               Download Invitation
             </button>

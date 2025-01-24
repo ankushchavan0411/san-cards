@@ -1,23 +1,9 @@
 /** @format */
 
+import { TemplateListProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import Ratings from "../Common/Ratings";
-
-// Define the structure of template data
-type Template = {
-  id: string;
-  title: string;
-  image: string;
-  price: number;
-  isFree: boolean;
-};
-
-type TemplateListProps = {
-  templates: Template[];
-  language: string;
-  category: string;
-};
 
 const TemplateList: React.FC<TemplateListProps> = ({
   templates,
@@ -40,7 +26,7 @@ const TemplateList: React.FC<TemplateListProps> = ({
           <Link
             key={template.id}
             href={`/template/${language}/${category}/${template.id}`}
-            className="border overflow-hidden hover:shadow-lg transition-shadow border-orange-400 rounded-lg shadow-sm hover:shadow-orange-400"
+            className="border overflow-hidden hover:shadow-lg transition-shadow border-primary rounded-lg shadow-sm hover:shadow-primary"
           >
             <div className="w-full">
               <Image
@@ -64,7 +50,7 @@ const TemplateList: React.FC<TemplateListProps> = ({
                       <small className="text-green-500">Free</small>
                     )}
                   </span>
-                  <button className="text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                  <button className="text-white bg-primary hover:bg-primary-500 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                     {`Customize ${
                       !template.isFree ? "With Watermark" : "Free"
                     }`}

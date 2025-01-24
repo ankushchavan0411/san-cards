@@ -4,22 +4,9 @@
 
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import TemplateList from "@/components/TemplateList";
+import { Template, TemplatesData } from "@/types";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-
-type Template = {
-  id: string;
-  title: string;
-  image: string;
-  price: number;
-  isFree: boolean;
-};
-
-type TemplatesData = {
-  [language: string]: {
-    [category: string]: Template[];
-  };
-};
 
 // Mock data for templates
 const mockTemplates: TemplatesData = {
@@ -252,14 +239,25 @@ const TemplateListPage = () => {
     }
   }, [language, category]);
 
+  // Dynamically create breadcrumb links based on URL segments
   const breadcrumbs = [
     { label: "Home", href: "/" },
-    {
-      label: language
-        ? language.charAt(0).toUpperCase() + language.slice(1)
-        : "Language",
-    },
-    { label: category ? category.replace(/-/g, " ") : "Category" },
+    ...(language
+      ? [
+          {
+            label: language.charAt(0).toUpperCase() + language.slice(1),
+            href: `/template-lists/${language}`,
+          },
+        ]
+      : []),
+    ...(category
+      ? [
+          {
+            label: category.replace(/-/g, " ").toUpperCase(),
+            href: `/template-lists/${language}/${category}`,
+          },
+        ]
+      : []),
   ];
 
   return (

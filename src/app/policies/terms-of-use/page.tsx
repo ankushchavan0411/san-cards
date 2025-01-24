@@ -1,6 +1,7 @@
 /** @format */
 
 import PolicyLayout from "@/components/Policies/PolicyLayout";
+import Link from "next/link";
 
 export const metadata = {
   title: "San Utsav - Terms of Use",
@@ -87,12 +88,12 @@ export default function TermsOfUse() {
       <p>
         If you have questions or concerns about these Terms of Use, please
         contact us at{" "}
-        <a
+        <Link
           href="mailto:support@sancards.com"
           className="text-blue-600 hover:underline"
         >
           support@sancards.com
-        </a>
+        </Link>
         .
       </p>
     </PolicyLayout>

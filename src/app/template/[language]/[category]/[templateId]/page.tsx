@@ -54,13 +54,22 @@ const TemplatePage = () => {
 
   const breadcrumbs = [
     { label: "Home", href: "/" },
-    {
-      label: language
-        ? language.charAt(0).toUpperCase() + language.slice(1)
-        : "Language",
-    },
-    { label: category ? category.replace(/-/g, " ") : "Category" },
-    { label: templateId ? templateId.replace(/-/g, " ") : "Template Id" },
+    ...(language
+      ? [
+          {
+            label: language.charAt(0).toUpperCase() + language.slice(1),
+            href: `/template-lists/${language}`,
+          },
+        ]
+      : []),
+    ...(category
+      ? [
+          {
+            label: category.replace(/-/g, " ").toUpperCase(),
+            href: `/template-lists/${language}/${category}`,
+          },
+        ]
+      : []),
   ];
 
   return (

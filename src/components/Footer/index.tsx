@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="my-8 border-y border-orange-400">
+    <footer className="my-8 border-y border-primary">
       <div className="w-full mx-auto py-4">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link
@@ -23,7 +23,7 @@ const Footer = () => {
           </Link>
           <PolicyNavigationLinks />
         </div>
-        <hr className="my-4 sm:mx-auto dark:border-gray-700 lg:my-4 border-orange-400" />
+        <hr className="my-4 sm:mx-auto dark:border-gray-700 lg:my-4 border-primary" />
         <span className="block text-sm sm:text-center">
           &copy; {new Date().getFullYear()} San Utsav - All Rights Reserved.
           {/* &copy; 2025 San Utsav - All Rights Reserved. */}

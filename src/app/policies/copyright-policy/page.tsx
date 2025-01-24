@@ -1,6 +1,7 @@
 /** @format */
 
 import PolicyLayout from "@/components/Policies/PolicyLayout";
+import Link from "next/link";
 
 export const metadata = {
   title: "San Utsav - Copyright Policy",
@@ -77,12 +78,12 @@ export default function CopyrightPolicyPage() {
       </ul>
       <p className="mb-4">
         You can send the above information to us at{" "}
-        <a
+        <Link
           href="mailto:support@sancards.com"
           className="text-blue-600 hover:underline"
         >
           support@sancards.com
-        </a>
+        </Link>
         . We will promptly investigate and take appropriate action.
       </p>
 
@@ -103,12 +104,12 @@ export default function CopyrightPolicyPage() {
       <p>
         For any questions or concerns regarding this policy, please contact us
         at{" "}
-        <a
+        <Link
           href="mailto:support@sancards.com"
           className="text-blue-600 hover:underline"
         >
           support@sancards.com
-        </a>
+        </Link>
         .
       </p>
     </PolicyLayout>
