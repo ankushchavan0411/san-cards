@@ -1,8 +1,4 @@
-/**
- * eslint-disable @typescript-eslint/no-explicit-any
- *
- * @format
- */
+/** @format */
 
 import { Canvas, Text } from "fabric";
 import { useEffect, useRef, useState } from "react";
@@ -114,6 +110,7 @@ const WeddingCardWithFabric: React.FC = () => {
       const dataURL = fabricCanvasRef.current.toDataURL({
         format: "png",
         quality: 1,
+        multiplier: 1, // need to remove fix downloaded image corrupet
       });
 
       // Trigger download
