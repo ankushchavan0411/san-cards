@@ -1,7 +1,6 @@
 /** @format */
 "use client";
 
-import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -14,27 +13,6 @@ import Ratings from "../Common/Ratings";
 // import BirthdayTemplate from "./BirthdayTemplate";
 // import SakharpudaInvitation from "./SakharpudaInvitation";
 // import WeddingInvite from "./WeddingInvite";
-
-export async function generateMetadata({
-  params,
-}: {
-  params: { category: string; template: string };
-}): Promise<Metadata> {
-  const { category, template } = params;
-
-  return {
-    title: `${category.replace(/-/g, " ")} | Template ${template} | San Utsav`,
-    description: `Explore our ${category.replace(
-      /-/g,
-      " ",
-    )} - Template ${template}. Personalize your card with ease and celebrate your special moments with San Utsav.`,
-    keywords: `${category.replace(
-      /-/g,
-      ", ",
-    )}, template ${template}, San Utsav, Marathi invitation cards, personalized cards`,
-    robots: "index, follow",
-  };
-}
 
 const Template = ({ cardData }: any) => {
   return (
@@ -83,10 +61,7 @@ const Template = ({ cardData }: any) => {
               width={400}
               height={400}
             />
-            <button
-              // onClick={downloadImage}
-              className="w-full bg-primary text-white p-2 rounded-lg mt-4 hover:bg-primary-600"
-            >
+            <button className="w-full bg-primary text-white p-2 rounded-lg mt-4 hover:bg-primary-600">
               Preview
             </button>
           </div>
