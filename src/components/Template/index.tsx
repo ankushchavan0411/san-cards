@@ -3,8 +3,10 @@
 
 // import Image from "next/image";
 import { Metadata } from "next";
-import BirthdayTemplate from "./BirthdayTemplate";
-import WeddingInvite from "./WeddingInvite";
+// import SakharpudaInvitation from "./SakharpudaInvitation";
+import WeddingCardWithFabric from "./WeddingCardWithFabric";
+// import BirthdayTemplate from "./BirthdayTemplate";
+// import WeddingInvite from "./WeddingInvite";
 
 export async function generateMetadata({
   params,
@@ -41,8 +43,10 @@ const Template = ({ cardData }: any) => {
           height={400}
           width={400}
         /> */}
-        <BirthdayTemplate />
+        {/* <BirthdayTemplate /> */}
         {/* <WeddingInvite /> */}
+        {/* <SakharpudaInvitation /> */}
+        <WeddingCardWithFabric />
       </div>
     </div>
   );
