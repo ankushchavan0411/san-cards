@@ -18,8 +18,10 @@ const Template = ({ cardData }: any) => {
   return (
     <section className="text-gray-600 body-font overflow-hidden">
       <div className="py-8 mx-auto">
-        <div className="lg:w-5/5 mx-auto flex flex-wrap">
-          <div className="lg:w-1/2 w-full mt-6 lg:mt-0 border border-primary p-4 border-r-0">
+        {/* Use grid for layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+          {/* Left Section */}
+          <div className="border border-primary p-4">
             <h2 className="text-sm title-font text-gray-500 tracking-widest">
               TEMPLATE NAME
             </h2>
@@ -27,20 +29,18 @@ const Template = ({ cardData }: any) => {
               {cardData.title}
             </h1>
             <p className="leading-relaxed">{cardData.description}</p>
-            <div className="flex mt-6">
-              <span className="text-2xl font-bold flex gap-2">
-                <span
-                  className={`${cardData.isFree ? "line-through" : ""}`}
-                >{`₹${cardData.price}`}</span>
+            <div className="flex gap-4 mt-4 flex-wrap">
+              <div className="text-2xl font-bold flex gap-2">
+                <span className={`${cardData.isFree ? "line-through" : ""}`}>
+                  {`₹${cardData.price}`}
+                </span>
                 {cardData.isFree && (
                   <small className="text-green-500">Free</small>
                 )}
-              </span>
-            </div>
-            <div className="flex mb-4 gap-2">
+              </div>
               <Ratings rating={4} />
-              <span className="text-gray-600 mt-2"> 20 Reviews</span>
-              <span className="flex gap-1 items-center text-primary mb-2">
+              <div className="text-gray-600">20 Reviews</div>
+              <div className="flex gap-2 items-center text-primary">
                 <Link href={"#"}>
                   <IoLogoInstagram className="h-6 w-6" />
                 </Link>
@@ -50,12 +50,14 @@ const Template = ({ cardData }: any) => {
                 <Link href={"#"}>
                   <IoLogoPinterest className="h-6 w-6" />
                 </Link>
-              </span>
+              </div>
             </div>
           </div>
-          <div className="lg:w-1/2 border border-primary p-4">
+
+          {/* Right Section */}
+          <div className="border border-primary p-4">
             <Image
-              className="w-full lg:h-auto h-64 object-cover object-center rounded"
+              className="w-full h-auto object-cover object-center rounded"
               alt="ecommerce"
               src="https://dummyimage.com/400x400"
               width={400}
