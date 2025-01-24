@@ -48,12 +48,12 @@ const SakharpudaInvitation: React.FC = () => {
       ctx.fillText(
         `Bride: ${brideName}`,
         ctx.canvas.width / 2,
-        ctx.canvas.height / 2 - 40
+        ctx.canvas.height / 2 - 40,
       );
       ctx.fillText(
         `Groom: ${groomName}`,
         ctx.canvas.width / 2,
-        ctx.canvas.height / 2 + 40
+        ctx.canvas.height / 2 + 40,
       );
 
       // Wedding Date and Venue
@@ -61,12 +61,12 @@ const SakharpudaInvitation: React.FC = () => {
       ctx.fillText(
         `Date: ${weddingDate}`,
         ctx.canvas.width / 2,
-        ctx.canvas.height / 1.5
+        ctx.canvas.height / 1.5,
       );
       ctx.fillText(
         `Venue: ${venue}`,
         ctx.canvas.width / 2,
-        ctx.canvas.height / 1.3
+        ctx.canvas.height / 1.3,
       );
 
       // Update the preview image URL

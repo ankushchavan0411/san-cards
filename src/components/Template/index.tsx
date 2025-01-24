@@ -19,11 +19,11 @@ export async function generateMetadata({
     title: `${category.replace(/-/g, " ")} | Template ${template} | San Utsav`,
     description: `Explore our ${category.replace(
       /-/g,
-      " "
+      " ",
     )} - Template ${template}. Personalize your card with ease and celebrate your special moments with San Utsav.`,
     keywords: `${category.replace(
       /-/g,
-      ", "
+      ", ",
     )}, template ${template}, San Utsav, Marathi invitation cards, personalized cards`,
     robots: "index, follow",
   };

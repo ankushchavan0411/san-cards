@@ -25,7 +25,7 @@ const TemplatePage = () => {
       const fetchData = async () => {
         try {
           const response = await fetch(
-            `${window.location.origin}/api/template/${language}/${category}/${templateId}`
+            `${window.location.origin}/api/template/${language}/${category}/${templateId}`,
           );
 
           if (!response.ok) {

@@ -35,7 +35,7 @@ const BirthdayTemplate: React.FC = () => {
       ctx.canvas.height / 2 + 50,
       40,
       0,
-      Math.PI * 2
+      Math.PI * 2,
     );
     ctx.fillStyle = "#fff";
     ctx.fill();
