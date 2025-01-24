@@ -37,11 +37,14 @@ export default {
         "background": "var(--background)",
         "foreground": "var(--foreground)",
         "primary": "#ba1313",
-        "primary-300": "#ba1515",
-        "primary-500": "#ba1717",
-        "primary-600":"#ba2020"
-        
-        
+        "primary-100": "#f7d4d4",
+        "primary-200": "#efaaaa",
+        "primary-300": "#e77f7f",
+        "primary-400": "#df5555",
+        "primary-500": "#ba1313", // Base Color
+        "primary-600": "#a10f0f",
+        "primary-700": "#860b0b",
+        "primary-800": "#6b0808" // Darkests
       },
     },
   },

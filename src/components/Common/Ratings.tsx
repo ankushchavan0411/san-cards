@@ -13,7 +13,7 @@ const Ratings: React.FC<RatingsProps> = ({ rating, maxRating = 5 }) => {
   const emptyStars = maxRating - filledStars - (hasHalfStar ? 1 : 0);
 
   return (
-    <div className="flex items-center mt-2.5 mb-5">
+    <div className="flex items-center">
       <div className="flex items-center space-x-1 rtl:space-x-reverse">
         {Array.from({ length: filledStars }).map((_, index) => (
           <svg
