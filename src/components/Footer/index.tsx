@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="my-8 border-y border-primary">
       <div className="w-full mx-auto py-4">
@@ -25,7 +27,7 @@ const Footer = () => {
         </div>
         <hr className="my-4 sm:mx-auto lg:my-4 border-primary" />
         <span className="block text-sm text-center">
-          &copy; {new Date().getFullYear()} San Utsav - All Rights Reserved.
+          <p>&copy; {currentYear} San Utsav - All Rights Reserved.</p>
           {/* &copy; 2025 San Utsav - All Rights Reserved. */}
         </span>
       </div>
