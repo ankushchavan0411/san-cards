@@ -1,6 +1,7 @@
 /** @format */
 
 import React from "react";
+import { whyChooseUs } from "./whyChooseUsData";
 
 const AboutUs: React.FC = () => {
   return (
@@ -31,30 +32,12 @@ const AboutUs: React.FC = () => {
         <h3 className="text-2xl font-semibold text-gray-900  mb-4">
           Why Choose San Utsav?
         </h3>
-        <ul className="text-lg text-gray-600  space-y-4">
-          <li>
-            <strong>Authentic Marathi Designs:</strong> We offer a curated
-            collection of traditional and contemporary Marathi card designs to
-            match the essence of every festival and celebration.
-          </li>
-          <li>
-            <strong>Easy Customization:</strong> With just a few clicks, you can
-            personalize your cards with your details, images, and messages.
-          </li>
-          <li>
-            <strong>Free and Accessible:</strong> We offer a completely free
-            online platform where you can create, customize, and download
-            invitations.
-          </li>
-          <li>
-            <strong>Instant Download:</strong> Once your card is ready, you can
-            instantly download it and share it with your loved ones.
-          </li>
-          <li>
-            <strong>Dedicated Support:</strong> Our customer support team is
-            always available to assist you with any queries or customization
-            requests.
-          </li>
+        <ul className="text-lg text-gray-600 space-y-4">
+          {whyChooseUs.map((item, index) => (
+            <li key={index}>
+              <strong>{item.title}:</strong> {item.description}
+            </li>
+          ))}
         </ul>
 
         <h3 className="text-2xl font-semibold text-gray-900  mb-4 mt-6">
