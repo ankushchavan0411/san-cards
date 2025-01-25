@@ -45,7 +45,7 @@ const TemplatePage = () => {
   }
 
   if (!cardData) {
-    return <Error message="Card data not found." />;
+    return <Error message="Template data not found." />;
   }
 
   const breadcrumbs = generateBreadcrumbs({ language, category, templateId });

@@ -9,10 +9,7 @@ import {
   IoLogoPinterest,
 } from "react-icons/io";
 import Ratings from "../Common/Ratings";
-
-// import BirthdayTemplate from "./BirthdayTemplate";
-// import SakharpudaInvitation from "./SakharpudaInvitation";
-// import WeddingInvite from "./WeddingInvite";
+import HowToCreateInvitation from "../HowToCreateInvitation";
 
 const Template = ({ cardData }: any) => {
   console.log("cardData", cardData);
@@ -31,13 +28,16 @@ const Template = ({ cardData }: any) => {
               {cardData.title}
             </h1>
             <p className="leading-relaxed">{cardData.description}</p>
+
+            <HowToCreateInvitation />
+
             <div className="flex gap-4 mt-4 flex-wrap">
               <div className="text-2xl font-bold flex gap-2">
                 <span className={`${cardData.isFree ? "line-through" : ""}`}>
                   {`₹${cardData.price}`}
                 </span>
                 {cardData.isFree && (
-                  <small className="text-green-500">Free</small>
+                  <small className="text-green-600">Free</small>
                 )}
               </div>
               <Ratings rating={cardData?.rating} reviews={cardData?.reviews} />
@@ -65,7 +65,7 @@ const Template = ({ cardData }: any) => {
               width={400}
               height={400}
             />
-            <button className="w-full bg-primary text-white p-2 rounded-lg mt-4 hover:bg-primary-600">
+            <button className="w-full bg-primary text-white p-2 rounded-lg mt-4 hover:bg-primary-600 hidden">
               Preview
             </button>
           </div>
