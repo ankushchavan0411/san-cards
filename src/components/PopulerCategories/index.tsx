@@ -1,12 +1,20 @@
 /** @format */
+"use client";
 
 import SectionTitle from "@/components/Common/SectionTitle";
+import { LanguageFilter } from "@/types";
 import { ROUTES } from "@/utility/routes";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import FilterButtons from "../Common/FilterButton";
 import { populerCategories } from "./data";
 
 const PopulerCategories: React.FC = () => {
+  const [selectedFilter, setSelectedFilter] =
+    useState<LanguageFilter>("marathi");
+
+  const filterOptions: LanguageFilter[] = ["marathi", "english"];
+
   return (
     <section id="populer_categories" className="py-16">
       <SectionTitle
@@ -17,8 +25,15 @@ const PopulerCategories: React.FC = () => {
         center
         mb="50px"
       />
+
+      <FilterButtons
+        filterOptions={filterOptions}
+        selectedFilter={selectedFilter}
+        onFilterChange={setSelectedFilter}
+      />
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-8 text-center">
-        {populerCategories["marathi"].map(
+        {populerCategories[selectedFilter].map(
           ({ name, language, category, description, categoryId }, index) => (
             <Link
               key={categoryId}

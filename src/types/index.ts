@@ -45,3 +45,5 @@ export interface GenerateBreadcrumbsProps {
   category?: string;
   templateId?: string;
 }
+
+export type LanguageFilter = "marathi" | "english";
