@@ -13,8 +13,6 @@ import HowToCreateInvitation from "../HowToCreateInvitation";
 import { templateComponentsList } from "./data";
 
 const Template = ({ cardData }: any) => {
-  console.log("cardData", cardData);
-
   const { title, image, price, isFree, rating, reviews, description, id } =
     cardData;
 
