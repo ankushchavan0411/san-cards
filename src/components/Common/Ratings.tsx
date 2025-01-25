@@ -41,7 +41,7 @@ const Ratings: React.FC<RatingsProps> = ({ rating, maxRating = 5 }) => {
         {Array.from({ length: emptyStars }).map((_, index) => (
           <svg
             key={`empty-${index}`}
-            className="w-4 h-4 text-gray-200 dark:text-gray-600"
+            className="w-4 h-4 text-gray-200"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -51,7 +51,7 @@ const Ratings: React.FC<RatingsProps> = ({ rating, maxRating = 5 }) => {
           </svg>
         ))}
       </div>
-      <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">
+      <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm ms-3">
         {rating.toFixed(1)}
       </span>
     </div>

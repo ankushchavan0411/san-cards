@@ -57,10 +57,10 @@ const Services: React.FC = () => {
   return (
     <div className="py-12 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white mb-6">
+        <h2 className="text-3xl font-extrabold text-gray-900 mb-6">
           Our Services
         </h2>
-        <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+        <p className="text-lg text-gray-600 mb-6">
           At San Utsav, we offer a wide range of customizable Marathi invitation
           cards for all your special occasions. From weddings to birthdays, we
           have the perfect card to make your event unforgettable.
