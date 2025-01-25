@@ -1,18 +1,18 @@
 /** @format */
 
+import SectionTitle from "@/components/Common/SectionTitle";
 import React from "react";
 import { testimonialsData } from "./testimonialsData";
 
 const Testimonials: React.FC = () => {
   return (
     <section className="py-16">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-1">Hear from Our Happy Users</h2>
-        <p className="text-lg text-gray-700">
-          Discover what our satisfied users have to say about their experience
-          with us.
-        </p>
-      </div>
+      <SectionTitle
+        title="Hear from Our Happy Users"
+        paragraph="Discover what our satisfied users have to say about their experience with us."
+        center
+        mb="50px"
+      />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {testimonialsData.map((testimonial, index) => (
           <div
