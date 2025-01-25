@@ -5,7 +5,7 @@ import React from "react";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Error = ({ message }: any) => {
   return (
-    <div className="flex h-[calc(100vh-80px)] w-full items-center justify-center bg-white p-5 dark:bg-gray-900">
+    <div className="flex h-[calc(100vh-80px)] w-full items-center justify-center bg-white p-5">
       <div className="text-center">
         <div className="inline-flex rounded-full bg-red-100 p-4">
           <div className="rounded-full bg-red-200 stroke-red-600 p-4">
@@ -30,7 +30,7 @@ const Error = ({ message }: any) => {
             </svg>
           </div>
         </div>
-        <h1 className="mt-5 text-[36px] font-bold text-black dark:text-white lg:text-[50px]">
+        <h1 className="mt-5 text-[36px] font-bold text-black lg:text-[50px]">
           500 - Server error
         </h1>
         <p className="mt-5 text-body-color lg:text-lg">{message}</p>
