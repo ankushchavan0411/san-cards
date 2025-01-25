@@ -12,19 +12,22 @@ type BreadcrumbProps = {
 const Breadcrumb = ({ items }: BreadcrumbProps) => {
   return (
     <nav className="mb-4">
-      <ul className="flex space-x-2 text-sm text-gray-600">
+      <ul className="flex text-sm">
         {items.map((item, index) => (
           <li key={index} className="flex items-center">
             {/* Render link for all but the last item */}
             {index < items.length - 1 ? (
-              <Link href={item.href} className="hover:underline">
+              <Link
+                href={item.href}
+                className="hover:underline hover:text-primary"
+              >
                 {item.label}
               </Link>
             ) : (
               <span>{item.label}</span> // Last item is not clickable
             )}
             {/* Separator */}
-            {index < items.length - 1 && <span className="mx-2">/</span>}
+            {index < items.length - 1 && <span className="mx-1">/</span>}
           </li>
         ))}
       </ul>

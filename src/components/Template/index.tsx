@@ -15,6 +15,8 @@ import Ratings from "../Common/Ratings";
 // import WeddingInvite from "./WeddingInvite";
 
 const Template = ({ cardData }: any) => {
+  console.log("cardData", cardData);
+
   return (
     <section className="text-gray-600 body-font overflow-hidden">
       <div className="py-8 mx-auto">
@@ -22,10 +24,10 @@ const Template = ({ cardData }: any) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
           {/* Left Section */}
           <div className="border border-primary p-4">
-            <h2 className="text-sm title-font text-gray-500 tracking-widest">
+            <h2 className="text-sm title-font text-gray-500 tracking-widest mb-2">
               TEMPLATE NAME
             </h2>
-            <h1 className="text-gray-900 text-3xl title-font font-medium mb-1 uppercase">
+            <h1 className="text-gray-900 text-xl title-font font-medium mb-1">
               {cardData.title}
             </h1>
             <p className="leading-relaxed">{cardData.description}</p>
@@ -38,8 +40,7 @@ const Template = ({ cardData }: any) => {
                   <small className="text-green-500">Free</small>
                 )}
               </div>
-              <Ratings rating={4} />
-              <div className="text-gray-600">20 Reviews</div>
+              <Ratings rating={cardData?.rating} reviews={cardData?.reviews} />
               <div className="flex gap-2 items-center text-primary">
                 <Link href={"#"}>
                   <IoLogoInstagram className="h-6 w-6" />
@@ -59,7 +60,8 @@ const Template = ({ cardData }: any) => {
             <Image
               className="w-full h-auto object-cover object-center rounded"
               alt="ecommerce"
-              src="https://dummyimage.com/400x400"
+              // src="https://dummyimage.com/400x400"
+              src={cardData.image}
               width={400}
               height={400}
             />
