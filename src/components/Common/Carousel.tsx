@@ -1,7 +1,7 @@
 /** @format */
 "use client";
-import React, { useState } from "react";
 import Image from "next/image";
+import React, { useState } from "react";
 
 const Carousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,13 +35,13 @@ const Carousel: React.FC = () => {
   return (
     <div className="relative w-full overflow-hidden">
       {/* Carousel Image */}
-      <div className="relative w-full h-72 sm:h-96 md:h-[400px]">
+      <div className="relative w-full h-auto">
         <Image
           src={images[currentIndex]}
           alt={`Invitation ${currentIndex}`}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg shadow-lg"
+          className="rounded-lg shadow-lg object-cover object-center w-full h-auto"
+          width={400}
+          height={400}
         />
       </div>
 
@@ -62,7 +62,7 @@ const Carousel: React.FC = () => {
       </button>
 
       {/* Indicators */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 hidden">
         {images.map((_, index) => (
           <span
             key={index}
