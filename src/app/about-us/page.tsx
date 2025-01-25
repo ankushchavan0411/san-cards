@@ -1,6 +1,8 @@
 /** @format */
 
-import AboutUs from "@/components/AboutUs";
+// import AboutUs from "@/components/AboutUs";
+import AboutUsTwo from "@/components/AboutUs/AboutTwo";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +15,12 @@ export const metadata: Metadata = {
 };
 
 const AboutUsPage = () => {
-  return <AboutUs />;
+  return (
+    <>
+      <AboutUsTwo />
+      {/* <AboutUs /> */}
+    </>
+  );
 };
 
 export default AboutUsPage;

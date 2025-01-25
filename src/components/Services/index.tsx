@@ -1,6 +1,7 @@
 /** @format */
 
 import React from "react";
+import PolicyLayout from "@/components/Policies/PolicyLayout";
 
 const Services: React.FC = () => {
   const services = [
@@ -55,31 +56,35 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <div className="py-12 px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl font-extrabold text-gray-900 mb-6">
-          Our Services
-        </h2>
-        <p className="text-lg text-gray-600 mb-6">
-          At San Utsav, we offer a wide range of customizable Marathi invitation
-          cards for all your special occasions. From weddings to birthdays, we
-          have the perfect card to make your event unforgettable.
-        </p>
+    <PolicyLayout title="Our Services">
+      <div className="py-8 px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex flex-col text-center w-full mb-12">
+            <h1 className="text-2xl font-medium title-font mb-4 text-gray-900 uppercase">
+              What We Offer
+            </h1>
+            <p className="mx-auto leading-relaxed text-base">
+              Experience the joy of celebration with San Utsav&rsquo;s
+              personalized invitations and creative solutions for every special
+              occasion.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-primary transition-shadow duration-300 border border-primary hover:shadow-lg cursor-pointer"
-            >
-              <div className="text-6xl mb-4">{service.icon}</div>
-              <h3 className="text-2xl font-semibold mb-2">{service.name}</h3>
-              <p className="text-gray-600">{service.description}</p>
-            </div>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-primary transition-shadow duration-300 border border-primary hover:shadow-lg cursor-pointer"
+              >
+                <div className="text-6xl mb-4">{service.icon}</div>
+                <h3 className="text-2xl font-semibold mb-2">{service.name}</h3>
+                <p className="text-gray-600">{service.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </PolicyLayout>
   );
 };
 

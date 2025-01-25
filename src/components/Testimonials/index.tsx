@@ -1,39 +1,20 @@
 /** @format */
 
+import SectionTitle from "@/components/Common/SectionTitle";
 import React from "react";
+import { testimonialsData } from "./testimonialsData";
 
 const Testimonials: React.FC = () => {
-  const testimonials = [
-    {
-      name: "Ravi Deshmukh",
-      feedback:
-        "San Utsav made our wedding so special with personalized cards. Their designs are beautiful and unique!",
-      location: "Pune, India",
-    },
-    {
-      name: "Priya Patil",
-      feedback:
-        "I loved the naming ceremony card we ordered from San Utsav. It was exactly what I was looking for.",
-      location: "Mumbai, India",
-    },
-    {
-      name: "Anita Shah",
-      feedback:
-        "The birthday card designs are fantastic! Simple yet elegant. Highly recommended.",
-      location: "Nagpur, India",
-    },
-  ];
-
   return (
     <section className="py-16">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold">What Other Users Say</h2>
-        <p className="text-lg text-gray-700">
-          Here are a few words from happy users.
-        </p>
-      </div>
+      <SectionTitle
+        title="Hear from Our Happy Users"
+        paragraph="Discover what our satisfied users have to say about their experience with us."
+        center
+        mb="50px"
+      />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {testimonials.map((testimonial, index) => (
+        {testimonialsData.map((testimonial, index) => (
           <div
             key={index}
             className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center border border-primary hover:shadow-primary"

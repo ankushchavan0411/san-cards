@@ -19,3 +19,18 @@ export type TemplateListProps = {
   language: string;
   category: string;
 };
+
+export interface WhyChooseUsItem {
+  title: string;
+  description: string;
+}
+
+export interface Testimonial {
+  name: string;
+  feedback: string;
+  location: string;
+}
+export interface Section {
+  title: string;
+  content: string;
+}

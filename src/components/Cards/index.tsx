@@ -1,5 +1,6 @@
 /** @format */
 
+import SectionTitle from "@/components/Common/SectionTitle";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -38,14 +39,13 @@ const Cards: React.FC = () => {
 
   return (
     <section className="pb-16">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold">Card Designs</h2>
-        <p className="text-lg text-gray-700">
-          Explore our wide collection of personalized invitation cards for all
-          occasions.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <SectionTitle
+        title="Invitation Card Designs"
+        paragraph="Browse our extensive collection of customizable invitation cards, perfect for every occasion and celebration."
+        center
+        mb="50px"
+      />
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {demoCards.map((card, index) => (
           <div
             key={index}
@@ -59,7 +59,9 @@ const Cards: React.FC = () => {
                 height={300}
                 className="rounded-lg mb-4"
               />
-              <h3 className="text-2xl font-semibold mb-2">{card.title}</h3>
+              <h3 className="text-1xl lg:text-2xl font-semibold mb-2">
+                {card.title}
+              </h3>
               <p className="text-gray-600">
                 Click below to explore more about this design.
               </p>
