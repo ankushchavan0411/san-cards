@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import { whyChooseUs } from "./whyChooseUsData";
+import { whyChooseUs } from "./data";
 
 const AboutUs: React.FC = () => {
   return (

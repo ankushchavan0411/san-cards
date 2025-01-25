@@ -30,3 +30,7 @@ export interface Testimonial {
   feedback: string;
   location: string;
 }
+export interface Section {
+  title: string;
+  content: string;
+}

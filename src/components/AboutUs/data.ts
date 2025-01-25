@@ -1,4 +1,4 @@
-import { WhyChooseUsItem } from "@/types";
+import { Section, WhyChooseUsItem } from "@/types";
 
 export const whyChooseUs: WhyChooseUsItem[] = [
   {
@@ -45,5 +45,18 @@ export const whyChooseUs: WhyChooseUsItem[] = [
     title: "Regular Updates",
     description:
       "We continuously update our collection with fresh, unique designs to keep up with trends and traditions.",
+  },
+];
+
+export const sections: Section[] = [
+  {
+    title: "Join Us in Celebrating Your Special Moments",
+    content:
+      "At San Utsav, we aim to bring joy and celebration to your special events by offering personalized Marathi festival and invitation cards. We understand the importance of tradition and culture, and we work diligently to create beautiful, customizable cards that reflect the spirit of your occasions. Whether it’s a wedding, birthday, festival, or any other occasion, San Utsav is here to help you create the perfect invitation to share your happiness with your friends and family. Join us in celebrating Marathi culture and tradition with beautiful, meaningful, and personalized invitation cards.",
+  },
+  {
+    title: "Our Mission",
+    content:
+      "Our mission is to provide a seamless and creative experience for those looking to celebrate their festivals, weddings, engagements, and other special occasions with a unique touch. We aim to preserve the essence of Marathi culture while making it easier for you to create and share beautiful, personalized invitations with your loved ones.",
   },
 ];
