@@ -23,7 +23,7 @@ const PolicyNavigationLinks: React.FC = () => {
         <Link
           key={index}
           href={link.href}
-          className={`hover:underline hover:text-primary hover:font-bold ${pathname === link.href ? "text-primary font-bold" : ""}`}
+          className={`hover:underline hover:text-primary ${pathname === link.href ? "text-primary font-bold" : ""}`}
         >
           {link.label}
         </Link>
