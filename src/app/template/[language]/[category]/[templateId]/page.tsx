@@ -7,6 +7,7 @@ import Error from "@/components/Common/Error";
 import Loader from "@/components/Common/Loader";
 import Template from "@/components/Template";
 import { generateBreadcrumbs } from "@/utility";
+import fetchService from "@/utility/fetchService";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -23,28 +24,21 @@ const TemplatePage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (language && category && templateId) {
-      const fetchData = async () => {
-        try {
-          const response = await fetch(
-            `${apiUrl}/api/template/${language}/${category}/${templateId}`,
-          );
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const url = `${apiUrl}/api/template/${language}/${category}/${templateId}`;
+        const data = await fetchService(url);
+        setCardData(data);
+      } catch (error) {
+        console.error("Error fetching card data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-          if (!response.ok) {
-            console.error("Failed to fetch card data");
-          }
-          const data = await response.json();
-          setCardData(data);
-        } catch (error) {
-          console.error("Error fetching card data:", error);
-        } finally {
-          setLoading(false);
-        }
-      };
-
-      fetchData();
-    }
-  }, [language, category, templateId, loading]);
+    fetchData();
+  }, [language, category, templateId, apiUrl]);
 
   if (loading) {
     return <Loader />;
