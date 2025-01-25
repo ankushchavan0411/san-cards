@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="my-8 border-y border-primary">
       <div className="w-full mx-auto py-4">
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between justify-center items-center text-center sm:text-left">
           <Link
             href="/"
             className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
@@ -24,7 +24,7 @@ const Footer = () => {
           <PolicyNavigationLinks />
         </div>
         <hr className="my-4 sm:mx-auto lg:my-4 border-primary" />
-        <span className="block text-sm sm:text-center">
+        <span className="block text-sm text-center">
           &copy; {new Date().getFullYear()} San Utsav - All Rights Reserved.
           {/* &copy; 2025 San Utsav - All Rights Reserved. */}
         </span>

@@ -18,7 +18,7 @@ const PolicyNavigationLinks: React.FC = () => {
   ];
 
   return (
-    <ul className="flex flex-wrap items-center mb-6 text-sm font-medium sm:mb-0 gap-4">
+    <ul className="flex flex-col sm:flex-row sm:items-center sm:justify-between justify-center items-center text-center sm:text-left flex-wrap mb-6 text-sm font-medium sm:mb-0 gap-4">
       {links.map((link, index) => (
         <Link
           key={index}
