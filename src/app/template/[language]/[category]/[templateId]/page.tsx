@@ -2,15 +2,17 @@
 
 "use client";
 
+import Breadcrumb from "@/components/Common/Breadcrumb";
 import Error from "@/components/Common/Error";
 import Loader from "@/components/Common/Loader";
 import Template from "@/components/Template";
+import { generateBreadcrumbs } from "@/utility";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import Breadcrumb from "@/components/Common/Breadcrumb";
 
 const TemplatePage = () => {
   const params = useParams();
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   // Type assertion to safely access params
   const language = params?.language as string | undefined;
@@ -25,7 +27,7 @@ const TemplatePage = () => {
       const fetchData = async () => {
         try {
           const response = await fetch(
-            `${window.location.origin}/api/template/${language}/${category}/${templateId}`,
+            `${apiUrl}/api/template/${language}/${category}/${templateId}`,
           );
 
           if (!response.ok) {
@@ -52,30 +54,13 @@ const TemplatePage = () => {
     return <Error message="Card data not found." />;
   }
 
-  const breadcrumbs = [
-    { label: "Home", href: "/" },
-    ...(language
-      ? [
-          {
-            label: language.charAt(0).toUpperCase() + language.slice(1),
-            href: `/template-lists/${language}`,
-          },
-        ]
-      : []),
-    ...(category
-      ? [
-          {
-            label: category.replace(/-/g, " ").toUpperCase(),
-            href: `/template-lists/${language}/${category}`,
-          },
-        ]
-      : []),
-  ];
+  const breadcrumbs = generateBreadcrumbs({ language, category, templateId });
 
   return (
     <div className="py-8 bg-gray-50 px-4">
       <Breadcrumb items={breadcrumbs} />
       <Template cardData={cardData} />
+      {/* <MarathiWeddingCard /> */}
     </div>
   );
 };

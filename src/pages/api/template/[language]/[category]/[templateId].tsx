@@ -1,6 +1,8 @@
 /** @format */
 
+import MarathiWeddingCard from "@/components/Template/Marathi/MarathiWeddingCard";
 import { NextApiRequest, NextApiResponse } from "next";
+import { ReactNode } from "react";
 
 // Define the structure of the mock data
 interface TemplateData {
@@ -10,6 +12,9 @@ interface TemplateData {
   image: string;
   isFree?: boolean;
   price?: number;
+  templateCompo?: ReactNode;
+  rating?: number;
+  reviews?: number;
 }
 
 interface CategoryData {
@@ -31,12 +36,15 @@ const mockData: MockData = {
     "wedding-invitation-card": {
       "template-wedding": {
         id: "template-wedding",
-        title: "Wedding Invitation Card",
+        title: "Marathi Traditional Wedding Invitation Card",
         description:
           "Celebrate the joyous union with our elegant Wedding invitation card.",
-        image: "/images/dohale-jevan-template-wedding.jpg",
+        image: "/template/marathi/marathi-wedding-invitation-card.png",
         isFree: true,
         price: 99,
+        templateCompo: <MarathiWeddingCard />,
+        rating: 4,
+        reviews: 64,
       },
     },
     "birthday-banner": {

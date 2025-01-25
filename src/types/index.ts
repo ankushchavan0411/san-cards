@@ -34,3 +34,14 @@ export interface Section {
   title: string;
   content: string;
 }
+
+export type Breadcrumb = {
+  label: string;
+  href: string;
+};
+
+export interface GenerateBreadcrumbsProps {
+  language?: string;
+  category?: string;
+  templateId?: string;
+}
