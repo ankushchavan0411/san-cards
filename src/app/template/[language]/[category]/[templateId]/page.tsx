@@ -54,7 +54,6 @@ const TemplatePage = () => {
     <div className="py-8 bg-gray-50 px-4">
       <Breadcrumb items={breadcrumbs} />
       <Template cardData={cardData} />
-      {/* <MarathiWeddingCard /> */}
     </div>
   );
 };
