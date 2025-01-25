@@ -40,20 +40,24 @@ const ContactUs = () => {
             with you.
           </p>
         </div>
-        <ul className="mt-12 items-center gap-x-12 gap-y-6 md:flex lg:mt-0 lg:gap-x-0">
+        <ul className="mt-12 flex flex-col items-center gap-y-6 gap-x-0 md:flex-row md:gap-x-12 md:gap-y-0 lg:mt-0 lg:gap-x-0">
           {contactMethods.map((item, idx) => (
             <li
               key={idx}
-              className="space-y-3 border-t py-6 md:max-w-sm md:border-t-0 md:py-0 lg:max-w-none lg:border-l lg:px-12"
+              className="space-y-3 border-t py-6 w-full max-w-sm md:max-w-sm md:border-t-0 md:py-0 lg:max-w-none lg:border-l lg:px-12"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border text-primary border-primary">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border text-primary border-primary mx-auto md:mx-0">
                 {item.icon}
               </div>
-              <h4 className="text-lg font-bold xl:text-xl">{item.title}</h4>
-              <p className="text-body-color">{item.desc}</p>
+              <h4 className="text-lg font-bold text-center md:text-left xl:text-xl">
+                {item.title}
+              </h4>
+              <p className="text-body-color text-center md:text-left">
+                {item.desc}
+              </p>
               <Link
                 href={item.link.href}
-                className="flex items-center gap-1 text-sm font-medium text-primary duration-150 hover:text-primary-400"
+                className="flex items-center justify-center gap-1 text-sm font-medium text-primary duration-150 hover:text-primary-400 md:justify-start"
               >
                 {item.link.name}
                 <svg
