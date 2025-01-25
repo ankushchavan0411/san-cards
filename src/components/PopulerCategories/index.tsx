@@ -60,11 +60,11 @@ const PopulerCategories: React.FC = () => {
           download.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-8 text-center">
         {populerCategories.map((category, index) => (
           <Link key={index} href={category.link}>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border hover:shadow-primary border-primary hover:cursor-pointer">
-              <h3 className="text-2xl font-semibold mb-4 text-primary-500">
+            <div className="bg-white px-2 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border hover:shadow-primary border-primary hover:cursor-pointer h-auto">
+              <h3 className="text-2xl font-semibold mb-2 text-primary-500">
                 {category.name}
               </h3>
               <p className="text-gray-800">{category.description}</p>
