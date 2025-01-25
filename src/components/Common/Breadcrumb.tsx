@@ -24,7 +24,7 @@ const Breadcrumb = ({ items }: BreadcrumbProps) => {
                 {item.label}
               </Link>
             ) : (
-              <span>{item.label}</span> // Last item is not clickable
+              <span className="text-gray-500">{item.label}</span> // Last item is not clickable
             )}
             {/* Separator */}
             {index < items.length - 1 && <span className="mx-1">/</span>}
