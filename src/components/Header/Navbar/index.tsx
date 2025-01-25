@@ -3,9 +3,10 @@
 "use client";
 
 /** @format */
+import { ROUTES } from "@/utility/routes";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 
 const Navbar: React.FC = () => {
@@ -13,10 +14,10 @@ const Navbar: React.FC = () => {
   const pathname = usePathname();
 
   const links = [
-    { href: "/", label: "Home" },
-    { href: "/services", label: "Services" },
-    { href: "/about-us", label: "About Us" },
-    { href: "/contact-us", label: "Contact Us" },
+    { href: `${ROUTES.HOME}`, label: "Home" },
+    { href: `${ROUTES.SERVICES}`, label: "Services" },
+    { href: `${ROUTES.ABOUT_US}`, label: "About Us" },
+    { href: `${ROUTES.CONTACT_US}`, label: "Contact Us" },
   ];
 
   const toggleMenu = () => {

@@ -9,10 +9,10 @@ export const ROUTES = {
   CONTACT_US: "/contact-us",
   SERVICES: "/services",
 
-  COPYRIGHT_POLICY: () => `${POLICIES}/copyright-policy`,
-  PRIVACY_POLICY: () => `${POLICIES}/privacy-policy`,
-  REFUND_POLICY: () => `${POLICIES}/refund-and-cancellation-policy`,
-  TERMS_OF_USE_POLICY: () => `${POLICIES}/terms-of-use`,
+  COPYRIGHT_POLICY: `${POLICIES}/copyright-policy`,
+  PRIVACY_POLICY: `${POLICIES}/privacy-policy`,
+  REFUND_POLICY: `${POLICIES}/refund-and-cancellation-policy`,
+  TERMS_OF_USE_POLICY: `${POLICIES}/terms-of-use`,
 
   TEMPLATE_LISTS_LANGUAGE: (language: string) =>
     `/${TEMPLATE_LISTS}/${language}`,
