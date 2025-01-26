@@ -27,6 +27,18 @@ const Template = ({ cardData }: any) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
           {/* Left Section */}
           <div className="border border-primary p-4">
+            <Image
+              className="w-full h-auto object-cover object-center rounded"
+              alt="ecommerce"
+              // src="https://dummyimage.com/400x400"
+              src={image}
+              width={400}
+              height={400}
+            />
+          </div>
+
+          {/* Right Section */}
+          <div className="border border-primary p-4">
             <h2 className="text-sm title-font text-gray-500 tracking-widest mb-2">
               TEMPLATE NAME
             </h2>
@@ -37,7 +49,7 @@ const Template = ({ cardData }: any) => {
 
             <HowToCreateInvitation />
 
-            <div className="flex gap-4 mt-4 flex-wrap">
+            <div className="flex gap-4 my-4 flex-wrap justify-center items-center">
               <div className="text-2xl font-bold flex gap-2">
                 <span className={`${isFree ? "line-through" : ""}`}>
                   {`₹${price}`}
@@ -59,20 +71,8 @@ const Template = ({ cardData }: any) => {
                 </Link>
               </div>
             </div>
-          </div>
-
-          {/* Right Section */}
-          <div className="border border-primary p-4">
-            <Image
-              className="w-full h-auto object-cover object-center rounded"
-              alt="ecommerce"
-              // src="https://dummyimage.com/400x400"
-              src={image}
-              width={400}
-              height={400}
-            />
-            <button className="w-full bg-primary text-white p-2 rounded-lg mt-4 hover:bg-primary-600 hidden">
-              Preview
+            <button className="w-full bg-primary text-white p-2 rounded-lg mt-4 hover:bg-primary-600">
+              Customize
             </button>
           </div>
         </div>
