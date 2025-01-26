@@ -2,15 +2,18 @@
 
 "use client";
 
+import Breadcrumb from "@/components/Common/Breadcrumb";
 import Error from "@/components/Common/Error";
 import Loader from "@/components/Common/Loader";
-import Template from "@/components/Template";
+import Template from "@/components/TemplateDesign";
+import { generateBreadcrumbs } from "@/utility";
+import fetchService from "@/utility/fetchService";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import Breadcrumb from "@/components/Common/Breadcrumb";
 
 const TemplatePage = () => {
   const params = useParams();
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   // Type assertion to safely access params
   const language = params?.language as string | undefined;
@@ -21,56 +24,31 @@ const TemplatePage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (language && category && templateId) {
-      const fetchData = async () => {
-        try {
-          const response = await fetch(
-            `${window.location.origin}/api/template/${language}/${category}/${templateId}`,
-          );
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const url = `${apiUrl}/api/template/${language}/${category}/${templateId}`;
+        const data = await fetchService(url);
+        setCardData(data);
+      } catch (error) {
+        console.error("Error fetching card data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-          if (!response.ok) {
-            console.error("Failed to fetch card data");
-          }
-          const data = await response.json();
-          setCardData(data);
-        } catch (error) {
-          console.error("Error fetching card data:", error);
-        } finally {
-          setLoading(false);
-        }
-      };
-
-      fetchData();
-    }
-  }, [language, category, templateId, loading]);
+    fetchData();
+  }, [language, category, templateId, apiUrl]);
 
   if (loading) {
     return <Loader />;
   }
 
   if (!cardData) {
-    return <Error message="Card data not found." />;
+    return <Error message="Template data not found." />;
   }
 
-  const breadcrumbs = [
-    { label: "Home", href: "/" },
-    ...(language
-      ? [
-          {
-            label: language.charAt(0).toUpperCase() + language.slice(1),
-            href: `/template-lists/${language}`,
-          },
-        ]
-      : []),
-    ...(category
-      ? [
-          {
-            label: category.replace(/-/g, " ").toUpperCase(),
-            href: `/template-lists/${language}/${category}`,
-          },
-        ]
-      : []),
-  ];
+  const breadcrumbs = generateBreadcrumbs({ language, category, templateId });
 
   return (
     <div className="py-8 bg-gray-50 px-4">

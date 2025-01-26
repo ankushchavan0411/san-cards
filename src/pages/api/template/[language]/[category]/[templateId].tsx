@@ -10,6 +10,8 @@ interface TemplateData {
   image: string;
   isFree?: boolean;
   price?: number;
+  rating?: number;
+  reviews?: number;
 }
 
 interface CategoryData {
@@ -31,12 +33,14 @@ const mockData: MockData = {
     "wedding-invitation-card": {
       "template-wedding": {
         id: "template-wedding",
-        title: "Wedding Invitation Card",
+        title: "Marathi Traditional Wedding Invitation Card",
         description:
           "Celebrate the joyous union with our elegant Wedding invitation card.",
-        image: "/images/dohale-jevan-template-wedding.jpg",
+        image: "/template/marathi/marathi-wedding-invitation-card.png",
         isFree: true,
         price: 99,
+        rating: 4,
+        reviews: 64,
       },
     },
     "birthday-banner": {
@@ -48,6 +52,8 @@ const mockData: MockData = {
         image: "/images/dohale-jevan-template-birthday.jpg",
         isFree: true,
         price: 99,
+        rating: 4,
+        reviews: 64,
       },
     },
     "housewarming-card": {
@@ -59,6 +65,8 @@ const mockData: MockData = {
         image: "/images/dohale-jevan-template-housewarming.jpg",
         isFree: true,
         price: 99,
+        rating: 4,
+        reviews: 64,
       },
     },
     "naming-ceremony-card": {
@@ -70,6 +78,8 @@ const mockData: MockData = {
         image: "/images/dohale-jevan-template-naming-ceremony.jpg",
         isFree: true,
         price: 99,
+        rating: 4,
+        reviews: 64,
       },
     },
   },

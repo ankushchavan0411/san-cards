@@ -1,14 +1,15 @@
 /** @format */
 
-import React from "react";
-import Link from "next/link";
+import { ROUTES } from "@/utility/routes";
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 const Hero: React.FC = () => {
   return (
     <>
       <div className="rounded-lg shadow-md hover:shadow-lg hover:shadow-gray-800 transition-shadow duration-300">
-        <Link href="/services">
+        <Link href={ROUTES.SERVICES}>
           <Image
             src={"/carousel/hero-page.svg"}
             alt={`hero`}
@@ -32,7 +33,7 @@ const Hero: React.FC = () => {
             occasions.
           </p>
           <Link
-            href="/services"
+            href={ROUTES.SERVICES}
             className="inline-block bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold py-3 px-8 rounded-lg shadow-lg text-xl transition duration-300"
           >
             Explore Our Services

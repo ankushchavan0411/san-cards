@@ -5,9 +5,14 @@ import React from "react";
 interface RatingsProps {
   rating: number;
   maxRating?: number;
+  reviews?: number;
 }
 
-const Ratings: React.FC<RatingsProps> = ({ rating, maxRating = 5 }) => {
+const Ratings: React.FC<RatingsProps> = ({
+  rating,
+  maxRating = 5,
+  reviews = 33,
+}) => {
   const filledStars = Math.floor(rating);
   const hasHalfStar = rating % 1 >= 0.5;
   const emptyStars = maxRating - filledStars - (hasHalfStar ? 1 : 0);
@@ -51,8 +56,11 @@ const Ratings: React.FC<RatingsProps> = ({ rating, maxRating = 5 }) => {
           </svg>
         ))}
       </div>
-      <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm ms-3">
+      <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm ms-3 border border-primary">
         {rating.toFixed(1)}
+        <span className="border-primary ml-1 border-l px-1">
+          {reviews} Reviews
+        </span>
       </span>
     </div>
   );

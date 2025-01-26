@@ -1,5 +1,6 @@
 /** @format */
 
+import { ROUTES } from "@/utility/routes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -7,14 +8,14 @@ const PolicyNavigationLinks: React.FC = () => {
   const pathname = usePathname();
 
   const links = [
-    { href: "/policies/privacy-policy", label: "Privacy Policy" },
+    { url: `${ROUTES.PRIVACY_POLICY}`, label: "Privacy Policy" },
     {
-      href: "/policies/refund-and-cancellation-policy",
+      url: `${ROUTES.REFUND_POLICY}`,
       label: "Refund Policy",
     },
-    { href: "/policies/terms-of-use", label: "Terms of Use" },
-    { href: "/policies/copyright-policy", label: "Copyright Policy" },
-    { href: "/contact-us", label: "Contact Us" },
+    { url: `${ROUTES.TERMS_OF_USE_POLICY}`, label: "Terms of Use" },
+    { url: `${ROUTES.COPYRIGHT_POLICY}`, label: "Copyright Policy" },
+    { url: `${ROUTES.CONTACT_US}`, label: "Contact Us" },
   ];
 
   return (
@@ -22,8 +23,8 @@ const PolicyNavigationLinks: React.FC = () => {
       {links.map((link, index) => (
         <Link
           key={index}
-          href={link.href}
-          className={`hover:underline hover:text-primary hover:font-bold ${pathname === link.href ? "text-primary font-bold" : ""}`}
+          href={link.url}
+          className={`hover:underline hover:text-primary ${pathname === link.url ? "text-primary font-bold" : ""}`}
         >
           {link.label}
         </Link>
