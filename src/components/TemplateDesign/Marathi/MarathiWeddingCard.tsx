@@ -1,12 +1,14 @@
 "use client";
 
 import DynamicForm from "@/components/Common/DynamicForm";
+import ProgressBar from "@/components/Common/ProgressBar";
 import html2canvas from "html2canvas";
 import React, { useState } from "react";
 import * as Yup from "yup";
 
 // Main Component
 const MarathiWeddingCard: React.FC = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [initialValues, setInitialValues] = useState({
     title: "|| श्री गणेशाय नमः ||",
     groomTitle: "चि.",
@@ -125,6 +127,7 @@ const MarathiWeddingCard: React.FC = () => {
       require: true,
     },
   ];
+
   const handleSubmit = (values: any) => {
     console.log("Submitted Values:", values);
 
@@ -154,6 +157,7 @@ const MarathiWeddingCard: React.FC = () => {
   };
 
   const downloadCard = async () => {
+    setIsLoading(true);
     const cardElement = document.getElementById("wedding-card");
     if (cardElement) {
       const canvas = await html2canvas(cardElement);
@@ -165,6 +169,12 @@ const MarathiWeddingCard: React.FC = () => {
   };
 
   const userInfo = { ...initialValues };
+
+  if (isLoading) {
+    return (
+      <ProgressBar setFinish={setIsLoading} speed={25} initialProgress={30} />
+    );
+  }
 
   return (
     <section className="overflow-hidden">

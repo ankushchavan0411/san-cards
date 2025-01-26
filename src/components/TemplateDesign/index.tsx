@@ -36,7 +36,7 @@ const Template = ({ cardData }: any) => {
               {/* Left Section */}
               <div className="border border-primary p-4">
                 <Image
-                  className="w-full h-auto object-cover object-center rounded"
+                  className="w-full h-[600px] rounded"
                   alt="ecommerce"
                   // src="https://dummyimage.com/400x400"
                   src={image}
