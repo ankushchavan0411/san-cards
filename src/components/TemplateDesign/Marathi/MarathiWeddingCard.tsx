@@ -9,8 +9,10 @@ import * as Yup from "yup";
 const MarathiWeddingCard: React.FC = () => {
   const [initialValues, setInitialValues] = useState({
     title: "|| श्री गणेशाय नमः ||",
+    groomTitle: "चि.",
     groomName: "विजय",
     brideDetails: "श्री. अरुण पवार यांची जेष्ठ सुकन्या रा.मुंबई.",
+    brideTitle: "चि.सौ.का",
     brideName: "सुनिता",
     groomDetails: "श्री. गणेश सावंत यांचे जेष्ठ चिरंजीव रा.पुणे.",
     weddingDetails:
@@ -21,7 +23,7 @@ const MarathiWeddingCard: React.FC = () => {
     inviter: "समस्त पवार परिवार",
     contact: "9988778999",
     image: {
-      imageDataUrl: "",
+      imageDataUrl: "/god/ganpati-bappa.png",
     },
   });
 
@@ -48,6 +50,12 @@ const MarathiWeddingCard: React.FC = () => {
       placeholder: "Title's Name",
     },
     {
+      name: "groomTitle",
+      label: "Groom's Title",
+      type: "text",
+      placeholder: "Groom's Title",
+    },
+    {
       name: "groomName",
       label: "Groom's Name",
       type: "text",
@@ -59,6 +67,12 @@ const MarathiWeddingCard: React.FC = () => {
       label: "Groom's Details",
       type: "textarea",
       placeholder: "Groom's Details",
+    },
+    {
+      name: "groomTitle",
+      label: "Bride's Title",
+      type: "text",
+      placeholder: "Bride's Title",
     },
     {
       name: "brideName",
@@ -170,52 +184,70 @@ const MarathiWeddingCard: React.FC = () => {
         </div>
 
         {/* Preview Section */}
-        <div id="wedding-card" className="border border-primary p-4">
-          <div className="text-center">
-            <h1 className="text-sm font-semibold text-red-700 font-[Tiro+Devanagari+Marathi]">
-              || श्री गणेशाय नमः ||
-            </h1>
-            <img
-              src={userInfo?.image?.imageDataUrl}
-              alt="Ganesh"
-              className="w-16 h-16 mx-auto my-4"
-            />
-          </div>
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl font-bold text-purple-800 font-[Laila]">
-              {userInfo.groomName}
-            </h2>
-            <p className="text-gray-700">{userInfo.groomDetails}</p>
-            <h2 className="text-3xl font-bold text-purple-800 font-[Laila]">
-              {userInfo.brideName}
-            </h2>
-            <p className="text-gray-700">{userInfo.brideDetails}</p>
-          </div>
-          <div className="text-center mt-8">
-            <h2 className="text-4xl font-extrabold text-pink-600 font-[Tiro+Devanagari+Marathi]">
-              शुभविवाह
-            </h2>
-          </div>
-          <div className="text-center mt-6 space-y-4">
-            <p className="text-gray-600">{userInfo.weddingDate}</p>
-            <p className="text-gray-600">{userInfo.weddingTime}</p>
-            <p className="text-gray-600">{userInfo.weddingDetails}</p>
-          </div>
-          <div className="mt-10">
-            <div className="text-center border-t border-gray-300 pt-4 space-y-4">
-              <h3 className="text-lg font-semibold text-gray-700 font-[Tiro+Devanagari+Marathi]">
-                विवाहस्थळ
-              </h3>
-              <p className="text-gray-600">{userInfo.venue}</p>
+        <div className="border border-primary p-4">
+          <div
+            className="bg-gradient-to-br from-pink-200 via-rose-300 to-red-200"
+            id="wedding-card"
+          >
+            <div className="p-10 bg-white/80 shadow-2xl rounded-2xl text-center text-sm">
+              <div className="text-center">
+                <h1 className="text-sm font-semibold text-red-700 font-[Tiro+Devanagari+Marathi]">
+                  {userInfo.title}
+                </h1>
+                <img
+                  src={userInfo?.image?.imageDataUrl}
+                  alt="Ganesh"
+                  className="w-16 h-16 mx-auto my-4"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="text-center space-y-4">
+                  <p className="text-sm text-purple-800 ">
+                    {userInfo.groomTitle}
+                  </p>
+                  <h2 className="text-3xl font-bold text-purple-800 font-[Laila]">
+                    {userInfo.groomName}
+                  </h2>
+                  <p className="text-gray-700">{userInfo.groomDetails}</p>
+                </div>
+                <div className="text-center space-y-4">
+                  <p className="text-sm text-purple-800 ">
+                    {userInfo.brideTitle}
+                  </p>
+                  <h2 className="text-3xl font-bold text-purple-800 font-[Laila]">
+                    {userInfo.brideName}
+                  </h2>
+                  <p className="text-gray-700">{userInfo.brideDetails}</p>
+                </div>
+              </div>
+              <div className="text-center mt-8">
+                <h2 className="text-4xl font-extrabold text-pink-600 font-[Tiro+Devanagari+Marathi]">
+                  || शुभविवाह ||
+                </h2>
+              </div>
+              <div className="text-center mt-6 space-y-4">
+                <p className="text-gray-600">
+                  {`${userInfo.weddingDate} ${userInfo.weddingTime} ${userInfo.weddingDetails}`}
+                </p>
+              </div>
+              <div className="mt-10">
+                <div className="text-center border-t border-gray-300 pt-4 space-y-4">
+                  <h3 className="text-lg font-semibold text-gray-700 font-[Tiro+Devanagari+Marathi]">
+                    विवाहस्थळ
+                  </h3>
+                  <p className="text-gray-600">{userInfo.venue}</p>
+                </div>
+                <div className="text-center border-t border-gray-300 pt-4 space-y-4 mt-4">
+                  <h3 className="text-lg font-semibold text-gray-700 font-[Tiro+Devanagari+Marathi]">
+                    निमंत्रक
+                  </h3>
+                  <p className="text-gray-600">{userInfo.inviter}</p>
+                  <p className="text-gray-600">संपर्क: {userInfo.contact}</p>
+                </div>
+              </div>
             </div>
-            <div className="text-center border-t border-gray-300 pt-4 space-y-4 mt-4">
-              <h3 className="text-lg font-semibold text-gray-700 font-[Tiro+Devanagari+Marathi]">
-                निमंत्रक
-              </h3>
-              <p className="text-gray-600">{userInfo.inviter}</p>
-              <p className="text-gray-600">संपर्क: {userInfo.contact}</p>
-            </div>
           </div>
+
           <button
             onClick={downloadCard}
             className="w-full p-2 rounded-lg mt-4 text-white bg-primary hover:bg-primary-600"
