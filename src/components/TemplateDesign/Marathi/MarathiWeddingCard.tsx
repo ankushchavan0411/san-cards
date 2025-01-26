@@ -191,9 +191,9 @@ const MarathiWeddingCard: React.FC = () => {
             <div className="p-8 bg-white/80 shadow-2xl rounded-2xl text-sm">
               <div className="absolute">
                 <img
-                  src={"/invite-calligraphy/nimantran.jpg"}
+                  src={"/invite-calligraphy/nimantran.png"}
                   alt="Nimantran"
-                  className="w-16 h-16"
+                  className="w-20 h-20"
                 />
               </div>
               <div className="text-center">
