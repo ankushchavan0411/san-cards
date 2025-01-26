@@ -185,10 +185,10 @@ const MarathiWeddingCard: React.FC = () => {
         {/* Preview Section */}
         <div className="border border-primary p-4">
           <div
-            className="bg-gradient-to-br from-pink-400 via-rose-400 to-red-400"
+            className="bg-gradient-to-br from-pink-400 via-rose-400 to-red-400 text-gray-900"
             id="wedding-card"
           >
-            <div className="p-8 bg-white/80 shadow-2xl rounded-2xl text-sm">
+            <div className="p-8 bg-white/80 shadow-2xl text-sm">
               <div className="absolute">
                 <img
                   src={"/invite-calligraphy/nimantran.png"}
@@ -212,19 +212,19 @@ const MarathiWeddingCard: React.FC = () => {
                     <p className="text-sm">{userInfo.groomTitle}</p>
                     {userInfo.groomName}
                   </h2>
-                  <p className="text-gray-700">{userInfo.groomDetails}</p>
+                  <p className="text-sm">{userInfo.groomDetails}</p>
                 </div>
                 <div className="text-center space-y-4">
                   <h2 className="text-3xl font-bold text-purple-800 khand-bold flex justify-center gap-1 items-center">
                     <p className="text-sm ">{userInfo.brideTitle}</p>
                     {userInfo.brideName}
                   </h2>
-                  <p className="text-gray-700">{userInfo.brideDetails}</p>
+                  <p className="text-sm">{userInfo.brideDetails}</p>
                 </div>
               </div>
               <div className="text-center mt-8">
                 <h2 className="text-5xl font-extrabold text-red-700 khand-bold">
-                  || शुभविवाह ||
+                  &#124;&#124; शुभविवाह &#124;&#124;
                 </h2>
               </div>
               <div className="text-center mt-6 space-y-4">
@@ -233,18 +233,20 @@ const MarathiWeddingCard: React.FC = () => {
                 </p>
               </div>
               <div className="mt-10">
-                <div className="text-center border-t border-gray-300 pt-4 space-y-4">
-                  <h3 className="text-lg font-semibold text-red-700 khand-bold">
-                    विवाहस्थळ
+                <div className="flex justify-center items-center flex-col border border-red-600 p-4 mt-4 border-dotted khand-bold gap-1">
+                  <h3 className="text-lg font-semibold text-red-700  bg-yellow-400 px-4 py-1 rounded-full">
+                    &#45; विवाहस्थळ &#45;
                   </h3>
-                  <p className="text-gray-600">{userInfo.venue}</p>
+                  <p className="font-semibold">{userInfo.venue}</p>
                 </div>
-                <div className="text-center border-t border-gray-300 pt-4 space-y-4 mt-4">
-                  <h3 className="text-lg font-semibold text-red-700 khand-bold">
-                    - निमंत्रक -
+                <div className="flex justify-center items-center flex-col border border-red-600 p-4 mt-4 border-dotted khand-bold gap-1">
+                  <h3 className="text-lg font-semibold text-red-700  bg-yellow-400 px-4 py-1 rounded-full">
+                    &#45; निमंत्रक &#45;
                   </h3>
-                  <p className="text-gray-600">{userInfo.inviter}</p>
-                  <p className="text-gray-600">संपर्क: {userInfo.contact}</p>
+                  <p className="font-bold text-red-700 text-2xl">
+                    {userInfo.inviter}
+                  </p>
+                  <p className="text-sm">संपर्क: {userInfo.contact}</p>
                 </div>
               </div>
             </div>
@@ -252,7 +254,7 @@ const MarathiWeddingCard: React.FC = () => {
 
           <button
             onClick={downloadCard}
-            className="w-full p-2 rounded-lg mt-4 text-white bg-primary hover:bg-primary-600"
+            className="w-full p-2 rounded-lg mt-4 text-white bg-blue-600 hover:bg-blue-500"
           >
             Download Card
           </button>
