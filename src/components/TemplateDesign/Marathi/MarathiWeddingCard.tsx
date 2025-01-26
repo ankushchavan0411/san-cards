@@ -33,13 +33,13 @@ const MarathiWeddingCard: React.FC = () => {
     contact: Yup.string()
       .matches(/^\d{10}$/, "Invalid contact number")
       .required("Contact is required"),
-    image: Yup.mixed()
-      .nullable()
-      .test(
-        "fileSize",
-        "File size should be less than 2MB",
-        (value: any) => !value || (value && value.size <= 2 * 1024 * 1024),
-      ),
+    // image: Yup.mixed()
+    //   .nullable()
+    //   .test(
+    //     "fileSize",
+    //     "File size should be less than 2MB",
+    //     (value: any) => !value || (value && value.size <= 2 * 1024 * 1024),
+    //   ),
   });
 
   const fields = [
@@ -117,7 +117,6 @@ const MarathiWeddingCard: React.FC = () => {
       label: "Contact",
       type: "text",
       placeholder: "Contact",
-      require: true,
     },
     {
       name: "image",
@@ -186,10 +185,17 @@ const MarathiWeddingCard: React.FC = () => {
         {/* Preview Section */}
         <div className="border border-primary p-4">
           <div
-            className="bg-gradient-to-br from-pink-200 via-rose-300 to-red-200"
+            className="bg-gradient-to-br from-pink-400 via-rose-400 to-red-400"
             id="wedding-card"
           >
-            <div className="p-10 bg-white/80 shadow-2xl rounded-2xl text-center text-sm">
+            <div className="p-8 bg-white/80 shadow-2xl rounded-2xl text-sm">
+              <div className="absolute">
+                <img
+                  src={"/invite-calligraphy/nimantran.jpg"}
+                  alt="Nimantran"
+                  className="w-16 h-16"
+                />
+              </div>
               <div className="text-center">
                 <h1 className="text-sm font-semibold text-red-700 font-[Tiro+Devanagari+Marathi]">
                   {userInfo.title}
