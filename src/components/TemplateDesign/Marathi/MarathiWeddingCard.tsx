@@ -128,7 +128,7 @@ const MarathiWeddingCard: React.FC = () => {
           {/* Right Section */}
           <div className="border border-primary p-4">
             <div className="text-center">
-              <h1 className="text-xl font-bold text-red-700 font-[Tiro+Devanagari+Marathi]">
+              <h1 className="text-sm font-semibold text-red-700 font-[Tiro+Devanagari+Marathi]">
                 || श्री गणेशाय नमः ||
               </h1>
               <img

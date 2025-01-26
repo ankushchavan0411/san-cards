@@ -5,7 +5,7 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Error from "@/components/Common/Error";
 import Loader from "@/components/Common/Loader";
-import Template from "@/components/Template";
+import Template from "@/components/TemplateDesign";
 import { generateBreadcrumbs } from "@/utility";
 import fetchService from "@/utility/fetchService";
 import { useParams } from "next/navigation";

@@ -1,4 +1,4 @@
-import MarathiWeddingCard from "@/components/Template/Marathi/MarathiWeddingCard";
+import MarathiWeddingCard from "@/components/TemplateDesign/Marathi/MarathiWeddingCard";
 
 // Define a type for the template list
 interface TemplateComponentEntry {
