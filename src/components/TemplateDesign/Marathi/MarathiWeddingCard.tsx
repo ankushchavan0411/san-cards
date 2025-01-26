@@ -1,13 +1,13 @@
 "use client";
 
-import React from "react";
-import html2canvas from "html2canvas";
-import * as Yup from "yup";
 import DynamicForm from "@/components/Common/DynamicForm";
+import html2canvas from "html2canvas";
+import React, { useState } from "react";
+import * as Yup from "yup";
 
 // Main Component
 const MarathiWeddingCard: React.FC = () => {
-  const initialValues = {
+  const [initialValues, setInitialValues] = useState({
     groomName: "राजवर्धन",
     groomDetails: "",
     brideName: "राजनंदिनी",
@@ -18,7 +18,7 @@ const MarathiWeddingCard: React.FC = () => {
     inviter: "",
     contact: "",
     image: null,
-  };
+  });
 
   const validationSchema = Yup.object().shape({
     groomName: Yup.string().required("Groom's Name is required"),
@@ -98,6 +98,12 @@ const MarathiWeddingCard: React.FC = () => {
 
   const handleSubmit = (values: any) => {
     console.log("Submitted Values:", values);
+    setInitialValues((pre) => {
+      return {
+        ...pre,
+        ...values,
+      };
+    });
     if (values.image) {
       const reader = new FileReader();
       reader.onload = (e) => {
