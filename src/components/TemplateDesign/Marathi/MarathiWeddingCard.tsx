@@ -197,7 +197,7 @@ const MarathiWeddingCard: React.FC = () => {
                 />
               </div>
               <div className="text-center">
-                <h1 className="text-sm font-semibold text-red-700 font-[Tiro+Devanagari+Marathi]">
+                <h1 className="text-sm font-semibold text-red-700 khand-bold">
                   {userInfo.title}
                 </h1>
                 <img
@@ -208,26 +208,22 @@ const MarathiWeddingCard: React.FC = () => {
               </div>
               <div className="grid grid-cols-2 gap-2">
                 <div className="text-center space-y-4">
-                  <p className="text-sm text-purple-800 ">
-                    {userInfo.groomTitle}
-                  </p>
-                  <h2 className="text-3xl font-bold text-purple-800 font-[Laila]">
+                  <h2 className="text-3xl font-bold text-purple-800 khand-bold flex justify-center gap-1 items-center">
+                    <p className="text-sm">{userInfo.groomTitle}</p>
                     {userInfo.groomName}
                   </h2>
                   <p className="text-gray-700">{userInfo.groomDetails}</p>
                 </div>
                 <div className="text-center space-y-4">
-                  <p className="text-sm text-purple-800 ">
-                    {userInfo.brideTitle}
-                  </p>
-                  <h2 className="text-3xl font-bold text-purple-800 font-[Laila]">
+                  <h2 className="text-3xl font-bold text-purple-800 khand-bold flex justify-center gap-1 items-center">
+                    <p className="text-sm ">{userInfo.brideTitle}</p>
                     {userInfo.brideName}
                   </h2>
                   <p className="text-gray-700">{userInfo.brideDetails}</p>
                 </div>
               </div>
               <div className="text-center mt-8">
-                <h2 className="text-4xl font-extrabold text-pink-600 font-[Tiro+Devanagari+Marathi]">
+                <h2 className="text-5xl font-extrabold text-red-700 khand-bold">
                   || शुभविवाह ||
                 </h2>
               </div>
@@ -238,14 +234,14 @@ const MarathiWeddingCard: React.FC = () => {
               </div>
               <div className="mt-10">
                 <div className="text-center border-t border-gray-300 pt-4 space-y-4">
-                  <h3 className="text-lg font-semibold text-gray-700 font-[Tiro+Devanagari+Marathi]">
+                  <h3 className="text-lg font-semibold text-red-700 khand-bold">
                     विवाहस्थळ
                   </h3>
                   <p className="text-gray-600">{userInfo.venue}</p>
                 </div>
                 <div className="text-center border-t border-gray-300 pt-4 space-y-4 mt-4">
-                  <h3 className="text-lg font-semibold text-gray-700 font-[Tiro+Devanagari+Marathi]">
-                    निमंत्रक
+                  <h3 className="text-lg font-semibold text-red-700 khand-bold">
+                    - निमंत्रक -
                   </h3>
                   <p className="text-gray-600">{userInfo.inviter}</p>
                   <p className="text-gray-600">संपर्क: {userInfo.contact}</p>

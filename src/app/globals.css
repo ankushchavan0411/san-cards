@@ -21,3 +21,89 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.khand-light {
+  font-family: "Khand", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.khand-regular {
+  font-family: "Khand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.khand-medium {
+  font-family: "Khand", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.khand-semibold {
+  font-family: "Khand", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.khand-bold {
+  font-family: "Khand", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.amiko-regular {
+  font-family: "Amiko", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.amiko-semibold {
+  font-family: "Amiko", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.amiko-bold {
+  font-family: "Amiko", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.bakbak-one-light {
+  font-family: "Bakbak One", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.bakbak-one-regular {
+  font-family: "Bakbak One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bakbak-one-medium {
+  font-family: "Bakbak One", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.bakbak-one-semibold {
+  font-family: "Bakbak One", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.bakbak-one-bold {
+  font-family: "Bakbak One", serif;
+  font-weight: 700;
+  font-style: normal;
+}
