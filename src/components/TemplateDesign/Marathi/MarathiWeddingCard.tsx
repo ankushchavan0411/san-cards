@@ -8,16 +8,21 @@ import * as Yup from "yup";
 // Main Component
 const MarathiWeddingCard: React.FC = () => {
   const [initialValues, setInitialValues] = useState({
-    groomName: "राजवर्धन",
-    groomDetails: "",
-    brideName: "राजनंदिनी",
-    brideDetails: "",
-    weddingDate: "",
-    weddingTime: "",
-    venue: "",
-    inviter: "",
-    contact: "",
-    image: null,
+    title: "|| श्री गणेशाय नमः ||",
+    groomName: "विजय",
+    brideDetails: "श्री. अरुण पवार यांची जेष्ठ सुकन्या रा.मुंबई.",
+    brideName: "सुनिता",
+    groomDetails: "श्री. गणेश सावंत यांचे जेष्ठ चिरंजीव रा.पुणे.",
+    weddingDetails:
+      "या शुभमुहूर्तावर करण्याचे योजिले आहे तरी या मंगल प्रसंगी आपण सहकुटुंब, सहपरिवार व मित्रमंडळी सह उपस्थित राहुन शुभाशिर्वाद ध्यावेत ही नम्र विनंती",
+    weddingDate: "रविवार दि. २४/०८/२०२४ रोजी",
+    weddingTime: "दु. १२ वा. ३० मि.",
+    venue: "व्दारका लॉन्स, नगर -कल्याण रोड ,नेप्ती नाका, मुंबई.",
+    inviter: "समस्त पवार परिवार",
+    contact: "9988778999",
+    image: {
+      imageDataUrl: "",
+    },
   });
 
   const validationSchema = Yup.object().shape({
@@ -36,6 +41,12 @@ const MarathiWeddingCard: React.FC = () => {
   });
 
   const fields = [
+    {
+      name: "title",
+      label: "Title",
+      type: "text",
+      placeholder: "Title's Name",
+    },
     {
       name: "groomName",
       label: "Groom's Name",
@@ -61,6 +72,12 @@ const MarathiWeddingCard: React.FC = () => {
       label: "Bride's Details",
       type: "textarea",
       placeholder: "Bride's Details",
+    },
+    {
+      name: "weddingDetails",
+      label: "Wedding Details",
+      type: "textarea",
+      placeholder: "Wedding Details",
     },
     {
       name: "weddingDate",
@@ -95,23 +112,34 @@ const MarathiWeddingCard: React.FC = () => {
       require: true,
     },
   ];
-
   const handleSubmit = (values: any) => {
     console.log("Submitted Values:", values);
-    setInitialValues((pre) => {
-      return {
-        ...pre,
-        ...values,
-      };
-    });
+
+    // Update other fields
+    setInitialValues((pre) => ({
+      ...pre,
+      ...values,
+    }));
+
+    // Check if the image field exists
     if (values.image) {
       const reader = new FileReader();
+
       reader.onload = (e) => {
-        console.log("Image Data URL:", e.target?.result);
+        const imageDataURL = e.target?.result;
+        setInitialValues((pre) => ({
+          ...pre,
+          image: {
+            ...values.image,
+            imageDataUrl: imageDataURL,
+          },
+        }));
       };
+
       reader.readAsDataURL(values.image);
     }
   };
+
   const downloadCard = async () => {
     const cardElement = document.getElementById("wedding-card");
     if (cardElement) {
@@ -148,7 +176,7 @@ const MarathiWeddingCard: React.FC = () => {
               || श्री गणेशाय नमः ||
             </h1>
             <img
-              src="/ganesh.png"
+              src={userInfo?.image?.imageDataUrl}
               alt="Ganesh"
               className="w-16 h-16 mx-auto my-4"
             />
@@ -171,9 +199,7 @@ const MarathiWeddingCard: React.FC = () => {
           <div className="text-center mt-6 space-y-4">
             <p className="text-gray-600">{userInfo.weddingDate}</p>
             <p className="text-gray-600">{userInfo.weddingTime}</p>
-            <p className="text-gray-600">
-              तरी आपण सर्वांनी सहकुटुंब सहपरिवार उपस्थित राहावे ही विनंती.
-            </p>
+            <p className="text-gray-600">{userInfo.weddingDetails}</p>
           </div>
           <div className="mt-10">
             <div className="text-center border-t border-gray-300 pt-4 space-y-4">
